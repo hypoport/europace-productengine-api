@@ -1,0 +1,673 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "FINMAS Externe Product Engine"
+  },
+  "host": "localhost:8080",
+  "basePath": "/finmas",
+  "tags": [
+    {
+      "name": "papi-externe-product-engine-controller",
+      "description": "Papi Externe Product Engine Controller"
+    }
+  ],
+  "paths": {
+    "/finmas/angebot": {
+      "get": {
+        "tags": [
+          "papi-externe-product-engine-controller"
+        ],
+        "summary": "zustand",
+        "operationId": "zustandUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "papi-externe-product-engine-controller"
+        ],
+        "summary": "berechneAngebot",
+        "operationId": "berechneAngebotUsingPOST",
+        "consumes": [
+          "application/json;charset=UTF-8"
+        ],
+        "produces": [
+          "application/json;charset=UTF-8"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "anfrage",
+            "description": "anfrage",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PapiExterneProductEngineAnfrage"
+            }
+          },
+          {
+            "name": "traceId",
+            "in": "header",
+            "description": "traceId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "featureSteuerung",
+            "in": "header",
+            "description": "featureSteuerung",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PapiExterneProductEngineAntwort"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "PapiExterneProductEngineAnfrage": {
+      "type": "object",
+      "properties": {
+        "anpassungenErlaubt": {
+          "type": "boolean"
+        },
+        "fallNummer": {
+          "type": "string"
+        },
+        "nachrangDarlehenIgnorieren": {
+          "type": "boolean"
+        },
+        "optionsShowStopperInput": {
+          "$ref": "#/definitions/OptionsShowStopperInput"
+        },
+        "ratingAntwort": {
+          "$ref": "#/definitions/SpkRatingAntwort"
+        },
+        "schufaDetails": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/SpeedSchufaDetails"
+          }
+        },
+        "speedOfferworkflowInput": {
+          "$ref": "#/definitions/SpeedOfferWorkflowInput"
+        },
+        "speedVariante": {
+          "$ref": "#/definitions/VariantenErmittlungsErgebnisÂ«SpeedFinanzierungsSpezifikationÂ»"
+        }
+      }
+    },
+    "BausparOption": {
+      "type": "object",
+      "properties": {
+        "abschlussGebuehrenVerrechnung": {
+          "type": "string",
+          "enum": [
+            "SOFORTZAHLUNG",
+            "VERRECHNUNG"
+          ]
+        },
+        "antragEntscheider": {
+          "$ref": "#/definitions/ProduktAnbieterId"
+        },
+        "auffuellungsKreditBetrag": {
+          "$ref": "#/definitions/Money"
+        },
+        "bausparSummenVorgabe": {
+          "$ref": "#/definitions/BausparSummenVorgabe"
+        },
+        "einmaligeSonderzahlung": {
+          "$ref": "#/definitions/Money"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "monatlicherBauSparbeitrag": {
+          "$ref": "#/definitions/Money"
+        },
+        "produzent": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "provisionsOption": {
+          "$ref": "#/definitions/ProvisionsOption"
+        },
+        "provisionsZahler": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "riesterVertrag": {
+          "type": "boolean"
+        },
+        "tarif": {
+          "type": "string"
+        },
+        "teilBausparSumme": {
+          "$ref": "#/definitions/Money"
+        },
+        "vereinbarterTilgungsBeitrag": {
+          "$ref": "#/definitions/Money"
+        },
+        "vertragsPartnerIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identifier"
+          }
+        },
+        "verwendung": {
+          "type": "string",
+          "enum": [
+            "TILGUNGSERSATZ",
+            "ZINSABSICHERUNG"
+          ]
+        },
+        "zuteilungsZeitpunkt": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "DarlehensOption": {
+      "type": "object"
+    },
+    "FinanzierungsOption": {
+      "type": "object",
+      "properties": {
+        "alternative": {
+          "type": "boolean"
+        },
+        "bausparOptionen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BausparOption"
+          }
+        },
+        "beleihungsWertSchaetzungDesVertriebes": {
+          "$ref": "#/definitions/Money"
+        },
+        "beratungsHonorar": {
+          "$ref": "#/definitions/Money"
+        },
+        "berechnungsstrategie": {
+          "type": "string",
+          "enum": [
+            "STANDARD",
+            "MIT_ABSPLITTUNG",
+            "EINZELN"
+          ]
+        },
+        "darlehensOptionsGruppen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DarlehensOptionsGruppe"
+          }
+        },
+        "finanzierungsArt": {
+          "type": "string",
+          "enum": [
+            "NACHFINANZIERUNG",
+            "NEUFINANZIERUNG",
+            "PROLONGATION",
+            "UMSCHULDUNG"
+          ]
+        },
+        "finanzierungsBedarf": {
+          "$ref": "#/definitions/Money"
+        },
+        "kennung": {
+          "type": "string"
+        },
+        "riesterFoerderungGewuenscht": {
+          "type": "boolean"
+        },
+        "sollProvisionOptimiertWerden": {
+          "type": "boolean"
+        },
+        "wunschTyp": {
+          "type": "string",
+          "enum": [
+            "FINANZIERUNGSBEDARF",
+            "SPEZIFISCHER_WUNSCH",
+            "UNSPEZIFISCHER_WUNSCH"
+          ]
+        }
+      }
+    },
+    "SpeedSchufaDetails": {
+      "type": "object"
+    },
+    "OptionsShowStopperInput": {
+      "type": "object",
+      "properties": {
+        "finanzierungsOption": {
+          "$ref": "#/definitions/FinanzierungsOption"
+        },
+        "offerWorkflowInput": {
+          "$ref": "#/definitions/SpeedOfferWorkflowInput"
+        },
+        "produzent": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "vertriebsGruppen": {
+          "$ref": "#/definitions/VertriebsGruppen"
+        },
+        "zuPruefendeDarlehensOption": {
+          "$ref": "#/definitions/DarlehensOption"
+        }
+      }
+    },
+    "Money": {
+      "type": "object",
+      "properties": {
+        "_amount": {
+          "type": "number"
+        },
+        "_currency": {
+          "type": "string"
+        }
+      }
+    },
+    "Identifier": {
+      "type": "object"
+    },
+    "SpeedFremdDarlehenInformation": {
+      "type": "object",
+      "properties": {
+        "anfaenglicherTilgungssatz": {
+          "$ref": "#/definitions/Percent"
+        },
+        "auszahlungsDatum": {
+          "type": "string",
+          "format": "date"
+        },
+        "auszahlungsKurs": {
+          "$ref": "#/definitions/Percent"
+        },
+        "bausparKombiProduktInformation": {
+          "$ref": "#/definitions/SpeedBausparKombiProduktInformation"
+        },
+        "bausteinOrdnung": {
+          "type": "string",
+          "enum": [
+            "VORGEORDNET",
+            "GEMEINSAM",
+            "NACHGEORDNET"
+          ]
+        },
+        "bereitstellungsZins": {
+          "$ref": "#/definitions/Percent"
+        },
+        "darlehensBetrag": {
+          "$ref": "#/definitions/Money"
+        },
+        "darlehensTyp": {
+          "type": "string",
+          "enum": [
+            "ANNUITAETENDARLEHEN",
+            "BAUSPARSOFORTDARLEHEN",
+            "CAPDARLEHEN",
+            "FORWARDDARLEHEN",
+            "KFWDARLEHEN",
+            "KONSTANTDARLEHEN",
+            "RIESTERBAUSPARSOFORTDARLEHEN",
+            "RIESTERDARLEHEN",
+            "RIESTERKONSTANTDARLEHEN",
+            "PRIVATDARLEHEN",
+            "TILGUNGSERSATZPRODUKT",
+            "UNBEKANNT",
+            "VARIABLESDARLEHEN",
+            "ZUTEILUNGSDARLEHEN",
+            "ZWISCHENFINANZIERUNG"
+          ]
+        },
+        "effektivzins": {
+          "$ref": "#/definitions/Percent"
+        },
+        "einstandsDatum": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endeZinsbindung": {
+          "type": "string",
+          "format": "date"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "kalkulatorischeLaufzeitInMonaten": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "kfwDarlehenInformation": {
+          "$ref": "#/definitions/SpeedKfwDarlehenInformation"
+        },
+        "kontofuehrungsGebuehrProJahr": {
+          "$ref": "#/definitions/Money"
+        },
+        "kreditEntscheider": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "monatlicheRate": {
+          "$ref": "#/definitions/Money"
+        },
+        "produzentenId": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "restschuldNachZinsbindung": {
+          "$ref": "#/definitions/Money"
+        },
+        "sollzins": {
+          "$ref": "#/definitions/Percent"
+        },
+        "tilgungsErsatzProdukte": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identifier"
+          }
+        },
+        "tilgungsart": {
+          "type": "string",
+          "enum": [
+            "ENDFAELLIG",
+            "AUSGESETZT",
+            "LAUFEND"
+          ]
+        },
+        "zahlungsWeise": {
+          "type": "string",
+          "enum": [
+            "MONATLICH",
+            "VIERTELJAEHRLICH",
+            "HALBJAEHRLICH",
+            "JAEHRLICH"
+          ]
+        },
+        "zinsBindungInMonaten": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "SpeedProductEngineAngebot": {
+      "type": "object"
+    },
+    "SpeedFremdProduktInformationen": {
+      "type": "object",
+      "properties": {
+        "fremdBausparInformationen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpeedFremdBausparInformation"
+          }
+        },
+        "fremdDarlehenInformationen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpeedFremdDarlehenInformation"
+          }
+        },
+        "fremdDarlehenInformationenFilter": {
+          "$ref": "#/definitions/SpeedFremdDarlehenInformationenFilter"
+        }
+      }
+    },
+    "SpeedKonditionsAngebot": {
+      "type": "object"
+    },
+    "PapiOptionsShowStopperPruefungOutput": {
+      "type": "object",
+      "properties": {
+        "showStopperClass": {
+          "type": "string"
+        },
+        "showStopperMeldung": {
+          "type": "string"
+        },
+        "showStopperVorhanden": {
+          "type": "boolean"
+        }
+      }
+    },
+    "SpeedFremdBausparInformation": {
+      "type": "object",
+      "properties": {
+        "abschlussGebuehr": {
+          "$ref": "#/definitions/Money"
+        },
+        "auszahlungsBetragBeiZuteilung": {
+          "$ref": "#/definitions/Money"
+        },
+        "bausparSumme": {
+          "$ref": "#/definitions/Money"
+        },
+        "einmalZahlung": {
+          "$ref": "#/definitions/Money"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "produzent": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "sparBeitragMonatlich": {
+          "$ref": "#/definitions/Money"
+        },
+        "vertragsBeginn": {
+          "type": "string",
+          "format": "date"
+        },
+        "verwaltungsGebuehrJaehrlich": {
+          "$ref": "#/definitions/Money"
+        },
+        "verwendung": {
+          "type": "string",
+          "enum": [
+            "TILGUNGSERSATZ",
+            "ZINSABSICHERUNG"
+          ]
+        },
+        "zahlungsStrom": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZahlungsStromEintrag"
+          }
+        },
+        "zuteilungsDatum": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "ProduktAnbieterId": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "VariantenErmittlungsErgebnisÂ«SpeedFinanzierungsSpezifikationÂ»": {
+      "type": "object"
+    },
+    "BausparSummenVorgabe": {
+      "type": "object"
+    },
+    "SpeedOfferWorkflowInput": {
+      "type": "object",
+      "properties": {
+        "fremdProduktInformationen": {
+          "$ref": "#/definitions/SpeedFremdProduktInformationen"
+        },
+        "produzent": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "produzentenAnfrage": {
+          "$ref": "#/definitions/SpeedAnfrage"
+        }
+      }
+    },
+    "SpeedBausparKombiProduktInformation": {
+      "type": "object",
+      "properties": {
+        "bausparDarlehenTilgungsPlanEnde": {
+          "type": "string",
+          "format": "date"
+        },
+        "bausparDarlehenTilgungsRateMonatlich": {
+          "$ref": "#/definitions/Money"
+        },
+        "bausparvertragSparBeitragMonatlich": {
+          "$ref": "#/definitions/Money"
+        }
+      }
+    },
+    "Percent": {
+      "type": "object",
+      "properties": {
+        "intVal": {
+          "type": "integer"
+        },
+        "scale": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "IMeldung": {
+      "type": "object"
+    },
+    "ProduzentenId": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "ZahlungsStromEintrag": {
+      "type": "object",
+      "properties": {
+        "betrag": {
+          "type": "number",
+          "format": "double"
+        },
+        "datum": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "SpeedAnfrage": {
+      "type": "object"
+    },
+    "ProvisionsOption": {
+      "type": "object",
+      "properties": {
+        "gesamtProvision": {
+          "$ref": "#/definitions/Percent"
+        }
+      }
+    },
+    "DarlehensOptionsGruppe": {
+      "type": "object",
+      "properties": {
+        "darlehensOptionen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DarlehensOption"
+          }
+        },
+        "position": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "SpeedFremdDarlehenInformationenFilter": {
+      "type": "object"
+    },
+    "SpkRatingAntwort": {
+      "type": "object"
+    },
+    "PapiExterneProductEngineAntwort": {
+      "type": "object",
+      "properties": {
+        "alleMeldungen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IMeldung"
+          }
+        },
+        "konditionsAngebot": {
+          "$ref": "#/definitions/SpeedKonditionsAngebot"
+        },
+        "productEngineAngebot": {
+          "$ref": "#/definitions/SpeedProductEngineAngebot"
+        },
+        "showStopperPruefungOutput": {
+          "$ref": "#/definitions/PapiOptionsShowStopperPruefungOutput"
+        }
+      }
+    },
+    "VertriebsGruppen": {
+      "type": "object",
+      "properties": {
+        "vertriebsGruppen": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "SpeedFinanzierungsSpezifikation": {
+      "type": "object"
+    },
+    "SpeedKfwDarlehenInformation": {
+      "type": "object",
+      "properties": {
+        "programmNummer": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}
