@@ -132,7 +132,7 @@
           "$ref": "#/definitions/SpeedOfferWorkflowInput"
         },
         "speedVariante": {
-          "$ref": "#/definitions/VariantenErmittlungsErgebnisÂ«SpeedFinanzierungsSpezifikationÂ»"
+          "$ref": "#/definitions/VariantenErmittlungsErgebnis"
         }
       }
     },
@@ -294,18 +294,10 @@
       }
     },
     "Money": {
-      "type": "object",
-      "properties": {
-        "_amount": {
-          "type": "number"
-        },
-        "_currency": {
-          "type": "string"
-        }
-      }
+      "type": "number"
     },
     "Identifier": {
-      "type": "object"
+      "type": "string"
     },
     "SpeedFremdDarlehenInformation": {
       "type": "object",
@@ -523,7 +515,7 @@
         }
       }
     },
-    "VariantenErmittlungsErgebnisÂ«SpeedFinanzierungsSpezifikationÂ»": {
+    "VariantenErmittlungsErgebnis": {
       "type": "object"
     },
     "BausparSummenVorgabe": {
@@ -559,16 +551,7 @@
       }
     },
     "Percent": {
-      "type": "object",
-      "properties": {
-        "intVal": {
-          "type": "integer"
-        },
-        "scale": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
+      "type": "number"
     },
     "IMeldung": {
       "type": "object"
