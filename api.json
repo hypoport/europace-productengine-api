@@ -62,7 +62,7 @@
             "description": "anfrage",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/PapiExterneProductEngineAnfrage"
+              "$ref": "#/definitions/ExterneProductEngineAnfrage"
             }
           },
           {
@@ -84,7 +84,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/PapiExterneProductEngineAntwort"
+              "$ref": "#/definitions/ExterneProductEngineAntwort"
             }
           },
           "201": {
@@ -104,7 +104,7 @@
     }
   },
   "definitions": {
-    "PapiExterneProductEngineAnfrage": {
+    "ExterneProductEngineAnfrage": {
       "type": "object",
       "properties": {
         "anpassungenErlaubt": {
@@ -443,7 +443,7 @@
     "SpeedKonditionsAngebot": {
       "type": "object"
     },
-    "PapiOptionsShowStopperPruefungOutput": {
+    "OptionsShowStopperPruefungOutput": {
       "type": "object",
       "properties": {
         "showStopperClass": {
@@ -609,7 +609,7 @@
     "SpkRatingAntwort": {
       "type": "object"
     },
-    "PapiExterneProductEngineAntwort": {
+    "ExterneProductEngineAntwort": {
       "type": "object",
       "properties": {
         "alleMeldungen": {
@@ -625,7 +625,7 @@
           "$ref": "#/definitions/SpeedProductEngineAngebot"
         },
         "showStopperPruefungOutput": {
-          "$ref": "#/definitions/PapiOptionsShowStopperPruefungOutput"
+          "$ref": "#/definitions/OptionsShowStopperPruefungOutput"
         }
       }
     },
