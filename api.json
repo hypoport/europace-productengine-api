@@ -14,36 +14,6 @@
   ],
   "paths": {
     "/finmas/angebot": {
-      "get": {
-        "tags": [
-          "papi-externe-product-engine-controller"
-        ],
-        "summary": "zustand",
-        "operationId": "zustandUsingGET",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "*/*"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "string"
-            }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
       "post": {
         "tags": [
           "papi-externe-product-engine-controller"
@@ -140,57 +110,11 @@
     "BausparOption": {
       "type": "object",
       "properties": {
-        "abschlussGebuehrenVerrechnung": {
-          "type": "string",
-          "enum": [
-            "SOFORTZAHLUNG",
-            "VERRECHNUNG"
-          ]
-        },
-        "antragEntscheider": {
-          "$ref": "#/definitions/ProduzentenId"
-        },
-        "auffuellungsKreditBetrag": {
-          "$ref": "#/definitions/Money"
-        },
-        "bausparSummenVorgabe": {
-          "$ref": "#/definitions/BausparSummenVorgabe"
-        },
-        "einmaligeSonderzahlung": {
-          "$ref": "#/definitions/Money"
-        },
         "identifier": {
           "$ref": "#/definitions/Identifier"
         },
-        "monatlicherBauSparbeitrag": {
-          "$ref": "#/definitions/Money"
-        },
         "produzent": {
           "$ref": "#/definitions/ProduzentenId"
-        },
-        "provisionsOption": {
-          "$ref": "#/definitions/ProvisionsOption"
-        },
-        "provisionsZahler": {
-          "$ref": "#/definitions/ProduzentenId"
-        },
-        "riesterVertrag": {
-          "type": "boolean"
-        },
-        "tarif": {
-          "type": "string"
-        },
-        "teilBausparSumme": {
-          "$ref": "#/definitions/Money"
-        },
-        "vereinbarterTilgungsBeitrag": {
-          "$ref": "#/definitions/Money"
-        },
-        "vertragsPartnerIds": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Identifier"
-          }
         },
         "verwendung": {
           "type": "string",
@@ -198,59 +122,14 @@
             "TILGUNGSERSATZ",
             "ZINSABSICHERUNG"
           ]
-        },
-        "zuteilungsZeitpunkt": {
-          "type": "string",
-          "format": "date"
         }
       }
-    },
-    "BausparSummenVorgabe": {
-      "type": "object",
-      "discriminator": "BausparSummenVorgabeTyp",
-      "properties": {
-        "BausparSummenVorgabeTyp": {
-          "type": "string",
-          "enum": [
-            "FESTER_BETRAG",
-            "PROZENTUALER_ANTEIL_DARLEHENSBETRAG"
-          ]
-        }
-      }
-    },
-    "FestBetragsBausparSummenVorgabe": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BausparSummenVorgabe"
-        },
-        {
-          "properties": {
-            "betrag": {
-              "$ref": "#/definitions/Money"
-            }
-          }
-        }
-      ]
-    },
-    "ProzentualerAnteilDarlehensBetragBausparsummenvorgabe": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/BausparSummenVorgabe"
-        },
-        {
-          "properties": {
-            "anteilDarlehensBetrag": {
-              "$ref": "#/definitions/Percent"
-            }
-          }
-        }
-      ]
     },
     "DarlehensOption": {
       "type": "object",
-      "discriminator": "DarlehensOptionsTyp",
+      "discriminator": "darlehensOptionsTyp",
       "properties": {
-        "DarlehensOptionsTyp": {
+        "darlehensOptionsTyp": {
           "type": "string",
           "enum": [
             "ANNUITAET",
@@ -537,9 +416,6 @@
         "finanzierungsBedarf": {
           "$ref": "#/definitions/Money"
         },
-        "kennung": {
-          "type": "string"
-        },
         "riesterFoerderungGewuenscht": {
           "type": "boolean"
         },
@@ -590,7 +466,7 @@
           "$ref": "#/definitions/VertriebsGruppen"
         },
         "zuPruefendeDarlehensOption": {
-          "$ref": "#/definitions/GemeinsameAttributeDarlehensOption"
+          "$ref": "#/definitions/DarlehensOption"
         }
       }
     },
@@ -679,6 +555,9 @@
         },
         "produzentenId": {
           "$ref": "#/definitions/ProduzentenId"
+        },
+        "produzentLangname": {
+          "type": "string"
         },
         "restschuldNachZinsbindung": {
           "$ref": "#/definitions/Money"
@@ -964,7 +843,7 @@
           "format": "date-time"
         },
         "spezifikation": {
-          "$ref": "#/definitions/SpeedEigenDarlehenSpezifikation"
+          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
         },
         "tilgungsPlan": {
           "$ref": "#/definitions/KundenTilgungsPlan"
@@ -1545,6 +1424,9 @@
         "produzent": {
           "$ref": "#/definitions/ProduzentenId"
         },
+        "produzentLangname": {
+          "type": "string"
+        },
         "sparBeitragMonatlich": {
           "$ref": "#/definitions/Money"
         },
@@ -1577,9 +1459,6 @@
     "VariantenErmittlungsErgebnis": {
       "type": "object",
       "properties": {
-        "angebotsVariantenTyp": {
-          "$ref": "#/definitions/Identifier"
-        },
         "anpassungsMeldungen": {
           "type": "array",
           "items": {
@@ -2261,9 +2140,6 @@
         "riesterVorFinanzierung": {
           "$ref": "#/definitions/Money"
         },
-        "schufaDetails": {
-          "$ref": "#/definitions/SpeedSchufaDetails"
-        },
         "staatsangehoerigkeit": {
           "$ref": "#/definitions/LaenderCode"
         },
@@ -2606,7 +2482,10 @@
           "type": "boolean"
         },
         "darlehensGeber": {
-          "$ref": "#/definitions/ProduzentenId"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProduzentenId"
+          }
         },
         "darlehensGeberBezeichnung": {
           "type": "string"
@@ -2650,9 +2529,6 @@
     "SpeedKontoverbindung": {
       "type": "object",
       "properties": {
-        "bankleitZahl": {
-          "$ref": "#/definitions/BankLeitzahl"
-        },
         "bic": {
           "type": "string"
         },
@@ -2672,14 +2548,6 @@
           }
         },
         "kreditInstitut": {
-          "type": "string"
-        }
-      }
-    },
-    "BankLeitzahl": {
-      "type": "object",
-      "properties": {
-        "wert": {
           "type": "string"
         }
       }
@@ -2833,24 +2701,7 @@
         "darlehen": {
           "type": "array",
           "items": {
-            "type": "object",
-            "oneOf": [
-              {
-                "§ref": "#/definitions/SpeedAnnuitaetenDarlehenSpezifikation"
-              },
-              {
-                "§ref": "#/definitions/SpeedForwardDarlehenSpezifikation"
-              },
-              {
-                "§ref": "#/definitions/SpeedPrivatDarlehenSpezifikation"
-              },
-              {
-                "§ref": "#/definitions/SpeedVariablesDarlehenSpezifikation"
-              },
-              {
-                "§ref": "#/definitions/SpeedZwischenfinanzierungSpezifikation"
-              }
-            ]
+            "$ref": "#/definitions/SpeedDarlehenSpezifikation"
           }
         },
         "finanzierungsart": {
@@ -2908,7 +2759,7 @@
     "SpeedPrivatDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedAnnuitaetenDarlehenSpezifikation"
+          "$ref": "#/definitions/SpeedTilgungsDarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2941,7 +2792,7 @@
     "SpeedZwischenfinanzierungSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedEigenDarlehenSpezifikation"
+          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2968,7 +2819,7 @@
     "SpeedTilgungsDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedEigenDarlehenSpezifikation"
+          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2985,61 +2836,6 @@
             },
             "tilgungsart": {
               "$ref": "#/definitions/TilgungsArt"
-            },
-            "disagio": {
-              "$ref": "#/definitions/Percent"
-            }
-          }
-        }
-      ]
-    },
-    "SpeedEigenDarlehenSpezifikation": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "auszahlungsDatum": {
-              "type": "string",
-              "format": "date"
-            },
-            "bereitstellungszinsenFreieZeitInMonaten": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "zahlungsweise": {
-              "$ref": "#/definitions/ZahlungsWeise"
-            },
-            "optionaleZinsVorgabe": {
-              "$ref": "#/definitions/Percent"
-            },
-            "nominalZinsVorgabeFixiert": {
-              "$ref": "#/definitions/Percent"
-            },
-            "einstandsDatumFixiert": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "einstandsVorgabe": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "manuelleKonditionsAnpassung": {
-              "$ref": "#/definitions/Percent"
-            },
-            "einstandsZins": {
-              "$ref": "#/definitions/Percent"
-            },
-            "kreditEntscheider": {
-              "$ref": "#/definitions/ProduzentenId"
-            },
-            "provisionsZahler": {
-              "$ref": "#/definitions/ProduzentenId"
-            },
-            "gesamtProvision": {
-              "$ref": "#/definitions/Percent"
             }
           }
         }
@@ -3047,9 +2843,66 @@
     },
     "SpeedDarlehenSpezifikation": {
       "type": "object",
+      "discriminator": "darlehenSpezifikationTyp",
       "properties": {
+        "abzuloesendeDarlehenIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identifier"
+          }
+        },
+        "auszahlungsDatum": {
+          "type": "string",
+          "format": "date"
+        },
+        "bereitstellungszinsenFreieZeitInMonaten": {
+          "type": "integer",
+          "format": "int32"
+        },
         "darlehenBetrag": {
           "$ref": "#/definitions/Money"
+        },
+        "darlehenSpezifikationTyp": {
+          "type": "string",
+          "enum": [
+            "ANNUITAET",
+            "FORWARD",
+            "PRIVAT",
+            "VARIABLES_DARLEHEN",
+            "ZWIFI"
+          ]
+        },
+        "einstandsDatumFixiert": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "einstandsVorgabe": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "einstandsZins": {
+          "$ref": "#/definitions/Percent"
+        },
+        "gesamtProvision": {
+          "$ref": "#/definitions/Percent"
+        },
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "kreditEntscheider": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "manuelleKonditionsAnpassung": {
+          "$ref": "#/definitions/Percent"
+        },
+        "nominalZinsVorgabeFixiert": {
+          "$ref": "#/definitions/Percent"
+        },
+        "optionaleZinsVorgabe": {
+          "$ref": "#/definitions/Percent"
+        },
+        "provisionsZahler": {
+          "$ref": "#/definitions/ProduzentenId"
         },
         "tilgungsErsatzProdukte": {
           "type": "array",
@@ -3057,14 +2910,8 @@
             "$ref": "#/definitions/Identifier"
           }
         },
-        "abzuloesendeDarlehenIds": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Identifier"
-          }
-        },
-        "identifier": {
-          "$ref": "#/definitions/Identifier"
+        "zahlungsweise": {
+          "$ref": "#/definitions/ZahlungsWeise"
         }
       }
     },
@@ -3092,9 +2939,9 @@
     },
     "DarlehensBetragsVorgabe": {
       "type": "object",
-      "discriminator": "DarlehensBetragsVorgabeTyp",
+      "discriminator": "darlehensBetragsVorgabeTyp",
       "properties": {
-        "DarlehensBetragsVorgabeTyp": {
+        "darlehensBetragsVorgabeTyp": {
           "type": "string",
           "enum": [
             "FESTER_BETRAG",
@@ -3211,9 +3058,9 @@
     },
     "TilgungsOption": {
       "type": "object",
-      "discriminator": "TilgungsOptionsTyp",
+      "discriminator": "tilgungsOptionsTyp",
       "properties": {
-        "TilgungsOptionsTyp": {
+        "tilgungsOptionsTyp": {
           "type": "string",
           "enum": [
             "ANFAENGLICH",
@@ -3283,9 +3130,9 @@
     },
     "SondertilgungsOption": {
       "type": "object",
-      "discriminator": "SondertilgungsOptionsTyp",
+      "discriminator": "sondertilgungsOptionsTyp",
       "properties": {
-        "SondertilgungsOptionsTyp": {
+        "sondertilgungsOptionsTyp": {
           "type": "string",
           "enum": [
             "JAEHRLICHE_RELATIVE_SONDERTILGUNG",
