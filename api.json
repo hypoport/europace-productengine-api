@@ -2958,17 +2958,6 @@
       "allOf": [
         {
           "$ref": "#/definitions/DarlehensBetragsVorgabe"
-        },
-        {
-          "properties": {
-            "kfwBetragZiel": {
-              "type": "string",
-              "enum": [
-                "MINIMAL",
-                "MAXIMAL"
-              ]
-            }
-          }
         }
       ]
     },
