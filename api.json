@@ -2143,6 +2143,9 @@
         "staatsangehoerigkeit": {
           "$ref": "#/definitions/LaenderCode"
         },
+        "steuerId": {
+          "type": "string"
+        },
         "inProbezeit": {
           "type": "boolean"
         },
@@ -2163,9 +2166,6 @@
         },
         "vermoegensAenderungNachZuVorfinanzierung": {
           "$ref": "#/definitions/Money"
-        },
-        "vorUndNachnamen": {
-          "type": "string"
         },
         "vorname": {
           "type": "string"
