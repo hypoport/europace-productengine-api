@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "FINMAS Externe Product Engine",
+    "title": "Europace Product Engine API",
     "version": "0.0.0"
   },
   "host": "localhost:8080",

@@ -8,10 +8,12 @@ Die API ist im Swagger-Format 2.0 (direkter Vorläufer von [OpenAPI](https://www
 
 ### Angebote auch zu minimalem Datenset (Vorbehaltsmeldungen)
 
-### Statuslosigkeit
+### Statuslosigkeit (mit Konditionsangeboten)
 
 ### Anpassungen (mit Meldungen)
 
 ### Showstopper vs Rotmeldungen
 
 ### Bindefrist und Bestzins
+
+### Übersichten
