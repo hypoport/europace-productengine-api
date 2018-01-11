@@ -6,18 +6,9 @@
   },
   "host": "localhost:8080",
   "basePath": "/finmas",
-  "tags": [
-    {
-      "name": "papi-externe-product-engine-controller",
-      "description": "Papi Externe Product Engine Controller"
-    }
-  ],
   "paths": {
     "/finmas/angebot": {
       "post": {
-        "tags": [
-          "papi-externe-product-engine-controller"
-        ],
         "summary": "berechneAngebot",
         "operationId": "berechneAngebotUsingPOST",
         "consumes": [
@@ -96,11 +87,11 @@
         "schufaDetails": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "#/definitions/SpeedSchufaDetails"
+            "$ref": "#/definitions/SchufaDetails"
           }
         },
         "speedOfferworkflowInput": {
-          "$ref": "#/definitions/SpeedOfferWorkflowInput"
+          "$ref": "#/definitions/OfferWorkflowInput"
         },
         "speedVariante": {
           "$ref": "#/definitions/VariantenErmittlungsErgebnis"
@@ -432,7 +423,7 @@
         }
       }
     },
-    "SpeedSchufaDetails": {
+    "SchufaDetails": {
       "type": "object",
       "properties": {
         "schufaMerkmale": {
@@ -457,7 +448,7 @@
           "$ref": "#/definitions/FinanzierungsOption"
         },
         "offerWorkflowInput": {
-          "$ref": "#/definitions/SpeedOfferWorkflowInput"
+          "$ref": "#/definitions/OfferWorkflowInput"
         },
         "produzent": {
           "$ref": "#/definitions/ProduzentenId"
@@ -476,7 +467,7 @@
     "Identifier": {
       "type": "string"
     },
-    "SpeedFremdDarlehenInformation": {
+    "FremdDarlehenInformation": {
       "type": "object",
       "properties": {
         "anfaenglicherTilgungssatz": {
@@ -542,7 +533,7 @@
           "format": "int32"
         },
         "kfwDarlehenInformation": {
-          "$ref": "#/definitions/SpeedKfwDarlehenInformation"
+          "$ref": "#/definitions/KfwDarlehenInformation"
         },
         "kontofuehrungsGebuehrProJahr": {
           "$ref": "#/definitions/Money"
@@ -583,7 +574,7 @@
         }
       }
     },
-    "SpeedProductEngineAngebot": {
+    "ProductEngineAngebot": {
       "type": "object",
       "properties": {
         "angebotsDatum": {
@@ -597,14 +588,14 @@
         "beleihungsWertDetails": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedBeleihungsWertDetails"
+            "$ref": "#/definitions/BeleihungsWertDetails"
           }
         },
         "beleihungsauslaufKondition": {
-          "$ref": "#/definitions/SpeedBeleihungsAuslaufDetails"
+          "$ref": "#/definitions/BeleihungsAuslaufDetails"
         },
         "beleihungsauslaufMachbarkeit": {
-          "$ref": "#/definitions/SpeedBeleihungsAuslaufDetails"
+          "$ref": "#/definitions/BeleihungsAuslaufDetails"
         },
         "berechnungsDatum": {
           "type": "string",
@@ -615,19 +606,19 @@
           "format": "date-time"
         },
         "bonitaetsDetails": {
-          "$ref": "#/definitions/SpeedBonitaetsDetails"
+          "$ref": "#/definitions/BonitaetsDetails"
         },
         "darlehen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedDarlehen"
+            "$ref": "#/definitions/Darlehen"
           }
         },
         "elektronischeUnterlagenEinreichung": {
           "type": "boolean"
         },
         "finanzcheckDetails": {
-          "$ref": "#/definitions/SpeedFinanzcheckDetails"
+          "$ref": "#/definitions/FinanzcheckDetails"
         },
         "finanzierungsArt": {
           "type": "string",
@@ -639,10 +630,10 @@
           ]
         },
         "kapitalVerwendungDetails": {
-          "$ref": "#/definitions/SpeedKapitalVerwendungsDetails"
+          "$ref": "#/definitions/KapitalVerwendungsDetails"
         },
         "lebensphasenPlanungsDetails": {
-          "$ref": "#/definitions/SpeedLebensphasenPlanungsDetails"
+          "$ref": "#/definitions/LebensphasenPlanungsDetails"
         },
         "meldungen": {
           "type": "array",
@@ -664,7 +655,7 @@
           "format": "date-time"
         },
         "unterlagen": {
-          "$ref": "#/definitions/SpeedUnterlagen"
+          "$ref": "#/definitions/Unterlagen"
         },
         "zusatzkostenVerteilerOutput": {
           "$ref": "#/definitions/ZusatzkostenVerteilerOutput"
@@ -746,7 +737,7 @@
         }
       }
     },
-    "SpeedUnterlagen": {
+    "Unterlagen": {
       "type": "object",
       "properties": {
         "neueUnterlagenAktiv": {
@@ -755,12 +746,12 @@
         "unterlagen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedUnterlage"
+            "$ref": "#/definitions/Unterlage"
           }
         }
       }
     },
-    "SpeedUnterlage": {
+    "Unterlage": {
       "type": "object",
       "properties": {
         "code": {
@@ -782,7 +773,7 @@
         }
       }
     },
-    "SpeedKapitalVerwendungsDetails": {
+    "KapitalVerwendungsDetails": {
       "type": "object",
       "properties": {
         "gesamtEigenkapital": {
@@ -790,7 +781,7 @@
         }
       }
     },
-    "SpeedLebensphasenPlanungsDetails": {
+    "LebensphasenPlanungsDetails": {
       "type": "object",
       "properties": {
         "uebersicht": {
@@ -798,7 +789,7 @@
         }
       }
     },
-    "SpeedDarlehen": {
+    "Darlehen": {
       "type": "object",
       "properties": {
         "bindefrist": {
@@ -809,7 +800,7 @@
           "$ref": "#/definitions/Identifier"
         },
         "konditionen": {
-          "$ref": "#/definitions/SpeedKonditionsErmittlungErgebnis"
+          "$ref": "#/definitions/KonditionsErmittlungErgebnis"
         },
         "konditionsUebersichtKreditbetrieb": {
           "$ref": "#/definitions/Uebersicht"
@@ -830,7 +821,7 @@
           "type": "boolean"
         },
         "provision": {
-          "$ref": "#/definitions/SpeedProvision"
+          "$ref": "#/definitions/Provision"
         },
         "provisionsGrenzen": {
           "$ref": "#/definitions/PercentRange"
@@ -843,14 +834,14 @@
           "format": "date-time"
         },
         "spezifikation": {
-          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
+          "$ref": "#/definitions/DarlehenSpezifikation"
         },
         "tilgungsPlan": {
           "$ref": "#/definitions/KundenTilgungsPlan"
         }
       }
     },
-    "SpeedProvision": {
+    "Provision": {
       "type": "object",
       "properties": {
         "gesamtProvisionAbsolut": {
@@ -878,7 +869,7 @@
         }
       }
     },
-    "SpeedKonditionsErmittlungErgebnis": {
+    "KonditionsErmittlungErgebnis": {
       "type": "object",
       "properties": {
         "auszahlungsKurs": {
@@ -904,7 +895,7 @@
           "$ref": "#/definitions/DarlehenMitEffektivZinsatzRelevanteZusaetzlicheKosten"
         },
         "einstand": {
-          "$ref": "#/definitions/SpeedEinstandsErmittlungErgebnis"
+          "$ref": "#/definitions/EinstandsErmittlungErgebnis"
         },
         "einstandZinsGerundet": {
           "$ref": "#/definitions/Percent"
@@ -964,7 +955,7 @@
         }
       }
     },
-    "SpeedEinstandsErmittlungErgebnis": {
+    "EinstandsErmittlungErgebnis": {
       "type": "object",
       "properties": {
         "einstandsDatum": {
@@ -976,11 +967,11 @@
         }
       }
     },
-    "SpeedFinanzcheckDetails": {
+    "FinanzcheckDetails": {
       "type": "object",
       "properties": {
         "ergebnis": {
-          "$ref": "#/definitions/SpeedFinanzcheckErgebnis"
+          "$ref": "#/definitions/FinanzcheckErgebnis"
         },
         "gesamtEigenleistungen": {
           "$ref": "#/definitions/Money"
@@ -996,7 +987,7 @@
         }
       }
     },
-    "SpeedFinanzcheckErgebnis": {
+    "FinanzcheckErgebnis": {
       "type": "object",
       "properties": {
         "betrag": {
@@ -1010,7 +1001,7 @@
         }
       }
     },
-    "SpeedBeleihungsWertDetails": {
+    "BeleihungsWertDetails": {
       "type": "object",
       "properties": {
         "beleihungsWert": {
@@ -1024,7 +1015,7 @@
         }
       }
     },
-    "SpeedBeleihungsAuslaufDetails": {
+    "BeleihungsAuslaufDetails": {
       "type": "object",
       "properties": {
         "auslauf": {
@@ -1033,7 +1024,7 @@
         "beleihungsWertDetails": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedBeleihungsAuslaufBeleihungsWertDetails"
+            "$ref": "#/definitions/BeleihungsAuslaufBeleihungsWertDetails"
           }
         },
         "beleihungswert": {
@@ -1053,7 +1044,7 @@
         }
       }
     },
-    "SpeedBeleihungsAuslaufBeleihungsWertDetails": {
+    "BeleihungsAuslaufBeleihungsWertDetails": {
       "type": "object",
       "properties": {
         "beleihungsWert": {
@@ -1072,7 +1063,7 @@
         }
       }
     },
-    "SpeedBonitaetsDetails": {
+    "BonitaetsDetails": {
       "type": "object",
       "properties": {
         "ausgaben": {
@@ -1351,24 +1342,24 @@
         }
       }
     },
-    "SpeedFremdProduktInformationen": {
+    "FremdProduktInformationen": {
       "type": "object",
       "properties": {
         "fremdBausparInformationen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedFremdBausparInformation"
+            "$ref": "#/definitions/FremdBausparInformation"
           }
         },
         "fremdDarlehenInformationen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedFremdDarlehenInformation"
+            "$ref": "#/definitions/FremdDarlehenInformation"
           }
         }
       }
     },
-    "SpeedKonditionsAngebot": {
+    "KonditionsAngebot": {
       "type": "object",
       "properties": {
         "anpassungsMeldungen": {
@@ -1382,7 +1373,7 @@
           "format": "date-time"
         },
         "finanzierung": {
-          "$ref": "#/definitions/SpeedFinanzierungsSpezifikation"
+          "$ref": "#/definitions/FinanzierungsSpezifikation"
         },
         "produzent": {
           "$ref": "#/definitions/ProduzentenId"
@@ -1403,7 +1394,7 @@
         }
       }
     },
-    "SpeedFremdBausparInformation": {
+    "FremdBausparInformation": {
       "type": "object",
       "properties": {
         "abschlussGebuehr": {
@@ -1466,21 +1457,21 @@
           }
         },
         "finanzierung": {
-          "$ref": "#/definitions/SpeedFinanzierungsSpezifikation"
+          "$ref": "#/definitions/FinanzierungsSpezifikation"
         }
       }
     },
-    "SpeedOfferWorkflowInput": {
+    "OfferWorkflowInput": {
       "type": "object",
       "properties": {
         "fremdProduktInformationen": {
-          "$ref": "#/definitions/SpeedFremdProduktInformationen"
+          "$ref": "#/definitions/FremdProduktInformationen"
         },
         "produzent": {
           "$ref": "#/definitions/ProduzentenId"
         },
         "produzentenAnfrage": {
-          "$ref": "#/definitions/SpeedAnfrage"
+          "$ref": "#/definitions/Anfrage"
         }
       }
     },
@@ -1576,13 +1567,13 @@
         }
       }
     },
-    "SpeedAnfrage": {
+    "Anfrage": {
       "type": "object",
       "properties": {
         "abzuloesendeDarlehen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedDarlehenEinerImmobilie"
+            "$ref": "#/definitions/DarlehenEinerImmobilie"
           }
         },
         "anzahlAuszahlungen": {
@@ -1590,54 +1581,54 @@
           "format": "int32"
         },
         "auszahlungsKonto": {
-          "$ref": "#/definitions/SpeedKontoverbindung"
+          "$ref": "#/definitions/Kontoverbindung"
         },
         "bestandsobjekte": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedBestandsObjekt"
+            "$ref": "#/definitions/BestandsObjekt"
           }
         },
         "darlehensnehmer": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedDarlehensnehmer"
+            "$ref": "#/definitions/Darlehensnehmer"
           }
         },
         "effektivZinsKosten": {
-          "$ref": "#/definitions/SpeedEffektivZinsKosten"
+          "$ref": "#/definitions/EffektivZinsKosten"
         },
         "externeDrittDarlehen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedExterneDrittDarlehen"
+            "$ref": "#/definitions/ExterneDrittDarlehen"
           }
         },
         "haushalte": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedHaushalt"
+            "$ref": "#/definitions/Haushalt"
           }
         },
         "nichtAbzuloesendeDarlehen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedDarlehenEinerImmobilie"
+            "$ref": "#/definitions/DarlehenEinerImmobilie"
           }
         },
         "objekte": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedObjekt"
+            "$ref": "#/definitions/Objekt"
           }
         },
         "ratenEinzugsKonto": {
-          "$ref": "#/definitions/SpeedKontoverbindung"
+          "$ref": "#/definitions/Kontoverbindung"
         },
         "verbindlichkeiten": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedVerbindlichkeit"
+            "$ref": "#/definitions/Verbindlichkeit"
           }
         },
         "wirdAngebotEmpfohlen": {
@@ -1649,12 +1640,12 @@
         "zusatzprodukte": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedZusatzProdukt"
+            "$ref": "#/definitions/ZusatzProdukt"
           }
         }
       }
     },
-    "SpeedVerbindlichkeit": {
+    "Verbindlichkeit": {
       "type": "object",
       "properties": {
         "endeLaufzeit": {
@@ -1672,7 +1663,7 @@
         }
       }
     },
-    "SpeedExterneDrittDarlehen": {
+    "ExterneDrittDarlehen": {
       "type": "object",
       "properties": {
         "darlehenBetrag": {
@@ -1706,7 +1697,7 @@
         }
       }
     },
-    "SpeedObjekt": {
+    "Objekt": {
       "type": "object",
       "properties": {
         "adresse": {
@@ -1772,7 +1763,7 @@
           }
         },
         "erbbau": {
-          "$ref": "#/definitions/SpeedErbbau"
+          "$ref": "#/definitions/Erbbau"
         },
         "finanzierungsObjekt": {
           "type": "boolean"
@@ -1784,7 +1775,7 @@
           "type": "number"
         },
         "flaechenDetailsWohnenGewerbe": {
-          "$ref": "#/definitions/SpeedFlaechenDetailsWohnenGewerbe"
+          "$ref": "#/definitions/FlaechenDetailsWohnenGewerbe"
         },
         "gewerbeflaecheVorhanden": {
           "type": "boolean"
@@ -1792,7 +1783,7 @@
         "grundbuecher": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedGrundbuch"
+            "$ref": "#/definitions/Grundbuch"
           }
         },
         "identifier": {
@@ -1805,7 +1796,7 @@
           "type": "boolean"
         },
         "kosten": {
-          "$ref": "#/definitions/SpeedKostenEinmalig"
+          "$ref": "#/definitions/KostenEinmalig"
         },
         "kubatur": {
           "type": "number"
@@ -1823,7 +1814,7 @@
           "$ref": "#/definitions/Money"
         },
         "modernisierungsAngaben": {
-          "$ref": "#/definitions/SpeedModernisierungsAngaben"
+          "$ref": "#/definitions/ModernisierungsAngaben"
         },
         "nutzungsArt": {
           "type": "string",
@@ -1850,7 +1841,7 @@
           "type": "string"
         },
         "stellplaetze": {
-          "$ref": "#/definitions/SpeedStellplaetze"
+          "$ref": "#/definitions/Stellplaetze"
         },
         "verwendungsZweck": {
           "type": "string",
@@ -1865,7 +1856,7 @@
         "vorlasten": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedVorlast"
+            "$ref": "#/definitions/Vorlast"
           }
         },
         "wohnlage": {
@@ -1881,13 +1872,13 @@
         }
       }
     },
-    "SpeedGrundbuch": {
+    "Grundbuch": {
       "type": "object",
       "properties": {
         "flurstuecke": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedFlurstueck"
+            "$ref": "#/definitions/Flurstueck"
           }
         },
         "identifier": {
@@ -1895,7 +1886,7 @@
         }
       }
     },
-    "SpeedFlurstueck": {
+    "Flurstueck": {
       "type": "object",
       "properties": {
         "anteilAmFlurstueck": {
@@ -1906,7 +1897,7 @@
         }
       }
     },
-    "SpeedKostenEinmalig": {
+    "KostenEinmalig": {
       "type": "object",
       "properties": {
         "aussenanlagen": {
@@ -1947,7 +1938,7 @@
         }
       }
     },
-    "SpeedModernisierungsAngaben": {
+    "ModernisierungsAngaben": {
       "type": "object",
       "properties": {
         "modernisierungsGrad": {
@@ -1967,24 +1958,24 @@
         }
       }
     },
-    "SpeedStellplaetze": {
+    "Stellplaetze": {
       "type": "object",
       "properties": {
         "carports": {
-          "$ref": "#/definitions/SpeedStellplatz"
+          "$ref": "#/definitions/Stellplatz"
         },
         "garagen": {
-          "$ref": "#/definitions/SpeedStellplatz"
+          "$ref": "#/definitions/Stellplatz"
         },
         "stellplaetze": {
-          "$ref": "#/definitions/SpeedStellplatz"
+          "$ref": "#/definitions/Stellplatz"
         },
         "tiefgaragen": {
-          "$ref": "#/definitions/SpeedStellplatz"
+          "$ref": "#/definitions/Stellplatz"
         }
       }
     },
-    "SpeedStellplatz": {
+    "Stellplatz": {
       "type": "object",
       "properties": {
         "anzahlEigennutzung": {
@@ -2000,7 +1991,7 @@
         }
       }
     },
-    "SpeedVorlast": {
+    "Vorlast": {
       "type": "object",
       "properties": {
         "abteilung": {
@@ -2027,7 +2018,7 @@
         }
       }
     },
-    "SpeedDarlehensnehmer": {
+    "Darlehensnehmer": {
       "type": "object",
       "properties": {
         "adresse": {
@@ -2054,7 +2045,7 @@
           ]
         },
         "ausgaben": {
-          "$ref": "#/definitions/SpeedAusgabenMonatlich"
+          "$ref": "#/definitions/AusgabenMonatlich"
         },
         "bankUndSparGuthaben": {
           "$ref": "#/definitions/Money"
@@ -2088,7 +2079,7 @@
           "$ref": "#/definitions/Identifier"
         },
         "einkommen": {
-          "$ref": "#/definitions/SpeedEinkommenMonatlich"
+          "$ref": "#/definitions/EinkommenMonatlich"
         },
         "familienStand": {
           "type": "string",
@@ -2125,7 +2116,7 @@
         "kinder": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedKind"
+            "$ref": "#/definitions/Kind"
           }
         },
         "lebenshaltungskostenVertriebsvorgabe": {
@@ -2173,12 +2164,12 @@
         "weiteresImmobilienVermoegen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedWeiteresImmobilienVermoegen"
+            "$ref": "#/definitions/WeiteresImmobilienVermoegen"
           }
         }
       }
     },
-    "SpeedHaushalt": {
+    "Haushalt": {
       "type": "object",
       "properties": {
         "darlehensnehmer": {
@@ -2226,7 +2217,7 @@
         }
       }
     },
-    "SpeedAusgabenMonatlich": {
+    "AusgabenMonatlich": {
       "type": "object",
       "properties": {
         "bauSparBeitraege": {
@@ -2264,7 +2255,7 @@
         }
       }
     },
-    "SpeedEinkommenMonatlich": {
+    "EinkommenMonatlich": {
       "type": "object",
       "properties": {
         "anzahlNettoeinkommenUnselbststaendig": {
@@ -2288,7 +2279,7 @@
         "nebentaetigkeiten": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedEinkommenNebentaetigkeit"
+            "$ref": "#/definitions/EinkommenNebentaetigkeit"
           }
         },
         "nettoeinkommenSelbstaendig": {
@@ -2301,14 +2292,14 @@
           "$ref": "#/definitions/Money"
         },
         "situationNachRenteneintritt": {
-          "$ref": "#/definitions/SpeedSituationNachRenteneintritt"
+          "$ref": "#/definitions/SituationNachRenteneintritt"
         },
         "unregelmaessigesNettoeinkommen": {
           "$ref": "#/definitions/Money"
         }
       }
     },
-    "SpeedEinkommenNebentaetigkeit": {
+    "EinkommenNebentaetigkeit": {
       "type": "object",
       "properties": {
         "beginnTaetigkeit": {
@@ -2320,7 +2311,7 @@
         }
       }
     },
-    "SpeedSituationNachRenteneintritt": {
+    "SituationNachRenteneintritt": {
       "type": "object",
       "properties": {
         "gesetzlicheRenteMonatlich": {
@@ -2338,7 +2329,7 @@
         }
       }
     },
-    "SpeedKind": {
+    "Kind": {
       "type": "object",
       "properties": {
         "geburtsDatum": {
@@ -2359,11 +2350,11 @@
         }
       }
     },
-    "SpeedWeiteresImmobilienVermoegen": {
+    "WeiteresImmobilienVermoegen": {
       "type": "object",
       "properties": {
         "erbbau": {
-          "$ref": "#/definitions/SpeedErbbau"
+          "$ref": "#/definitions/Erbbau"
         },
         "flaecheEigengenutzt": {
           "type": "number"
@@ -2384,7 +2375,7 @@
         }
       }
     },
-    "SpeedErbbau": {
+    "Erbbau": {
       "type": "object",
       "properties": {
         "erbbauRechtGeber": {
@@ -2406,7 +2397,7 @@
         }
       }
     },
-    "SpeedEffektivZinsKosten": {
+    "EffektivZinsKosten": {
       "type": "object",
       "properties": {
         "beratungsHonorar": {
@@ -2423,18 +2414,18 @@
         }
       }
     },
-    "SpeedBestandsObjekt": {
+    "BestandsObjekt": {
       "type": "object",
       "properties": {
         "flaechenDetailsWohnenGewerbe": {
-          "$ref": "#/definitions/SpeedFlaechenDetailsWohnenGewerbe"
+          "$ref": "#/definitions/FlaechenDetailsWohnenGewerbe"
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
         }
       }
     },
-    "SpeedFlaechenDetailsWohnenGewerbe": {
+    "FlaechenDetailsWohnenGewerbe": {
       "type": "object",
       "properties": {
         "bewirtschaftungsKostenJaehrlich": {
@@ -2469,7 +2460,7 @@
         }
       }
     },
-    "SpeedDarlehenEinerImmobilie": {
+    "DarlehenEinerImmobilie": {
       "type": "object",
       "properties": {
         "abzuloesendeRestschuld": {
@@ -2526,7 +2517,7 @@
         }
       }
     },
-    "SpeedKontoverbindung": {
+    "Kontoverbindung": {
       "type": "object",
       "properties": {
         "bic": {
@@ -2552,7 +2543,7 @@
         }
       }
     },
-    "SpeedZusatzProdukt": {
+    "ZusatzProdukt": {
       "type": "object",
       "properties": {
         "abtretungsBetrag": {
@@ -2671,10 +2662,10 @@
           }
         },
         "konditionsAngebot": {
-          "$ref": "#/definitions/SpeedKonditionsAngebot"
+          "$ref": "#/definitions/KonditionsAngebot"
         },
         "productEngineAngebot": {
-          "$ref": "#/definitions/SpeedProductEngineAngebot"
+          "$ref": "#/definitions/ProductEngineAngebot"
         },
         "showStopperPruefungOutput": {
           "$ref": "#/definitions/OptionsShowStopperPruefungOutput"
@@ -2692,7 +2683,7 @@
         }
       }
     },
-    "SpeedFinanzierungsSpezifikation": {
+    "FinanzierungsSpezifikation": {
       "type": "object",
       "properties": {
         "beleihungswertschaetzungDesVertriebes": {
@@ -2701,7 +2692,7 @@
         "darlehen": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/SpeedDarlehenSpezifikation"
+            "$ref": "#/definitions/DarlehenSpezifikation"
           }
         },
         "finanzierungsart": {
@@ -2724,10 +2715,10 @@
         }
       }
     },
-    "SpeedAnnuitaetenDarlehenSpezifikation": {
+    "AnnuitaetenDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedTilgungsDarlehenSpezifikation"
+          "$ref": "#/definitions/TilgungsDarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2746,20 +2737,20 @@
         }
       ]
     },
-    "SpeedForwardDarlehenSpezifikation": {
+    "ForwardDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedAnnuitaetenDarlehenSpezifikation"
+          "$ref": "#/definitions/AnnuitaetenDarlehenSpezifikation"
         },
         {
           "type": "object"
         }
       ]
     },
-    "SpeedPrivatDarlehenSpezifikation": {
+    "PrivatDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedTilgungsDarlehenSpezifikation"
+          "$ref": "#/definitions/TilgungsDarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2779,20 +2770,20 @@
         }
       ]
     },
-    "SpeedVariablesDarlehenSpezifikation": {
+    "VariablesDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedTilgungsDarlehenSpezifikation"
+          "$ref": "#/definitions/TilgungsDarlehenSpezifikation"
         },
         {
           "type": "object"
         }
       ]
     },
-    "SpeedZwischenfinanzierungSpezifikation": {
+    "ZwischenfinanzierungSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
+          "$ref": "#/definitions/DarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2816,10 +2807,10 @@
         }
       ]
     },
-    "SpeedTilgungsDarlehenSpezifikation": {
+    "TilgungsDarlehenSpezifikation": {
       "allOf": [
         {
-          "$ref": "#/definitions/SpeedDarlehenSpezifikation"
+          "$ref": "#/definitions/DarlehenSpezifikation"
         },
         {
           "type": "object",
@@ -2841,7 +2832,7 @@
         }
       ]
     },
-    "SpeedDarlehenSpezifikation": {
+    "DarlehenSpezifikation": {
       "type": "object",
       "discriminator": "darlehenSpezifikationTyp",
       "properties": {
@@ -2915,7 +2906,7 @@
         }
       }
     },
-    "SpeedKfwDarlehenInformation": {
+    "KfwDarlehenInformation": {
       "type": "object",
       "properties": {
         "programmNummer": {
