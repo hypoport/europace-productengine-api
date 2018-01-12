@@ -7,7 +7,7 @@
   "host": "localhost:8080",
   "basePath": "/",
   "paths": {
-    "/finmas/angebot": {
+    "/angebot": {
       "post": {
         "summary": "berechneAngebot",
         "operationId": "berechneAngebotUsingPOST",
@@ -31,14 +31,14 @@
             "name": "traceId",
             "in": "header",
             "description": "traceId",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "featureSteuerung",
             "in": "header",
             "description": "featureSteuerung",
-            "required": true,
+            "required": false,
             "type": "string"
           }
         ],
@@ -78,6 +78,9 @@
         "nachrangDarlehenIgnorieren": {
           "type": "boolean"
         },
+        "offerworkflowInput": {
+          "$ref": "#/definitions/OfferWorkflowInput"
+        },
         "optionsShowStopperInput": {
           "$ref": "#/definitions/OptionsShowStopperInput"
         },
@@ -90,10 +93,7 @@
             "$ref": "#/definitions/SchufaDetails"
           }
         },
-        "speedOfferworkflowInput": {
-          "$ref": "#/definitions/OfferWorkflowInput"
-        },
-        "speedVariante": {
+        "variante": {
           "$ref": "#/definitions/VariantenErmittlungsErgebnis"
         }
       }
