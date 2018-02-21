@@ -632,6 +632,9 @@
         "kapitalVerwendungDetails": {
           "$ref": "#/definitions/KapitalVerwendungsDetails"
         },
+        "kennung": {
+          "type": "string"
+        },
         "lebensphasenPlanungsDetails": {
           "$ref": "#/definitions/LebensphasenPlanungsDetails"
         },
