@@ -4,6 +4,11 @@
 
 Die API ist im Swagger-Format 2.0 (direkter Vorläufer von [OpenAPI](https://www.openapis.org/)) beschrieben. Über den [Swagger-Code-Generator](https://github.com/swagger-api/swagger-codegen) kann in den unterschiedlichsten Programmiersprachen eine Server-Implementierung direkt aus der API generiert werden.
 
+## Beispiel-Kommunikation
+
+[Anfrage](anfrage.json) | [Antwort](antwort.json)
+
+
 ## Konzepte
 
 ### Angebote auch zu minimalem Datenset (Vorbehaltsmeldungen)
