@@ -6,7 +6,7 @@ Die API ist im Swagger-Format 2.0 (direkter Vorläufer von [OpenAPI](https://www
 
 ## Beispiel-Kommunikation
 
-[Anfrage](anfrage.json) | [Antwort](antwort.json)
+[Anfrage](beispiele/anfrage.json) | [Antwort](beispiele/antwort.json)
 
 
 ## Konzepte
