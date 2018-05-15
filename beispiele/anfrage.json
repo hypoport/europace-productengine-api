@@ -105,7 +105,17 @@
           "vermoegenVorFinanzierung": "50.000,00",
           "vermoegensAenderungNachZuVorfinanzierung": "-50.000,00",
           "vorname": "Sabine",
-          "weiteresImmobilienVermoegen": []
+          "weiteresImmobilienVermoegen": [],
+          "arbeitgeberName": "Firma Arbeitgeber",
+          "branche": "SONSTIGES",
+          "telefonnummerVorhanden": true,
+          "ausweis": {
+            "nummer": "123456879-0",
+            "ausstellendeBehoerde": "BA Irgendwo",
+            "art": "PERSONALAUSWEIS",
+            "ausstellungsDatum": "1970-01-01"
+          },
+          "produzentEigeneBestehendeImmobilienKredite": "0,00"
         }
       ],
       "effektivZinsKosten": {},
@@ -144,7 +154,12 @@
           ],
           "identifier": {
             "value": "4410572684126354"
-          }
+          },
+          "eigengenutzeEigentumswohnungVorhanden": false,
+          "sonstigeVerbindlichkeitenRestschulden": "0,00",
+          "bestehendeImmobilienDarlehenRestschulden": ["0,00"],
+          "ratenkreditRestschulden": ["0,00"],
+          "privateDarlehenRestschulden": ["0,00"]
         }
       ],
       "nichtAbzuloesendeDarlehen": [],
@@ -183,11 +198,18 @@
               "flurstuecke": [
                 {
                   "anteilAmFlurstueck": 1.0,
-                  "flurstueckGroesse": 200.0
+                  "flurstueckGroesse": 200.0,
+                  "flur": "51",
+                  "flurstueck": "172b"
                 }
               ],
               "identifier": {
                 "value": "c828b34196759e6e2519c09ed24e1"
+              },
+              "deckblatt":{
+                "grundbuchVon": "Irgendwo",
+                "blattNr": "2",
+                "grundbuchArtAngegeben": true
               }
             }
           ],
@@ -226,14 +248,14 @@
       },
       "verbindlichkeiten": [],
       "zusaetzlicheKapitalBeschaffung": "0,00",
-      "zusatzprodukte": []
+      "zusatzprodukte": [],
+      "persoenlicheBeratung": true
     }
   },
   "optionsShowStopperInput": {
     "finanzierungsOption": {
       "alternative": false,
       "bausparOptionen": [],
-      "berechnungsstrategie": "STANDARD",
       "darlehensOptionsGruppen": [
         {
           "darlehensOptionen": [
@@ -300,8 +322,7 @@
       "finanzierungsArt": "NEUFINANZIERUNG",
       "finanzierungsBedarf": "161.000,00",
       "riesterFoerderungGewuenscht": false,
-      "sollProvisionOptimiertWerden": false,
-      "wunschTyp": "UNSPEZIFISCHER_WUNSCH"
+      "sollProvisionOptimiertWerden": false
     },
     "offerWorkflowInput": {
       "fremdProduktInformationen": {
@@ -406,7 +427,17 @@
             "vermoegenVorFinanzierung": "50.000,00",
             "vermoegensAenderungNachZuVorfinanzierung": "-50.000,00",
             "vorname": "Sabine",
-            "weiteresImmobilienVermoegen": []
+            "weiteresImmobilienVermoegen": [],
+            "arbeitgeberName": "Firma Arbeitgeber",
+            "branche": "SONSTIGES",
+            "telefonnummerVorhanden": true,
+            "ausweis": {
+              "nummer": "123456879-0",
+              "ausstellendeBehoerde": "BA Irgendwo",
+              "art": "PERSONALAUSWEIS",
+              "ausstellungsDatum": "1970-01-01"
+            },
+            "produzentEigeneBestehendeImmobilienKredite": "0,00"
           }
         ],
         "effektivZinsKosten": {},
@@ -445,7 +476,12 @@
             ],
             "identifier": {
               "value": "4410572684126354"
-            }
+            },
+            "eigengenutzeEigentumswohnungVorhanden": false,
+            "sonstigeVerbindlichkeitenRestschulden": "0,00",
+            "bestehendeImmobilienDarlehenRestschulden": ["0,00"],
+            "ratenkreditRestschulden": ["0,00"],
+            "privateDarlehenRestschulden": ["0,00"]
           }
         ],
         "nichtAbzuloesendeDarlehen": [],
@@ -484,11 +520,18 @@
                 "flurstuecke": [
                   {
                     "anteilAmFlurstueck": 1.0,
-                    "flurstueckGroesse": 200.0
+                    "flurstueckGroesse": 200.0,
+                    "flur": "51",
+                    "flurstueck": "172b"
                   }
                 ],
                 "identifier": {
                   "value": "c828b34196759e6e2519c09ed24e1"
+                },
+                "deckblatt":{
+                  "grundbuchVon": "Irgendwo",
+                  "blattNr": "2",
+                  "grundbuchArtAngegeben": true
                 }
               }
             ],
@@ -527,7 +570,8 @@
         },
         "verbindlichkeiten": [],
         "zusaetzlicheKapitalBeschaffung": "0,00",
-        "zusatzprodukte": []
+        "zusatzprodukte": [],
+        "persoenlicheBeratung": true
       }
     },
     "produzent": {

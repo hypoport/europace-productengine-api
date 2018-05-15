@@ -2,7 +2,8 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "0.0.0"
+    "version": "1.1.2",
+    "description": "PAPI"
   },
   "host": "localhost:8080",
   "basePath": "/",
@@ -381,14 +382,6 @@
         "beratungsHonorar": {
           "$ref": "#/definitions/Money"
         },
-        "berechnungsstrategie": {
-          "type": "string",
-          "enum": [
-            "STANDARD",
-            "MIT_ABSPLITTUNG",
-            "EINZELN"
-          ]
-        },
         "darlehensOptionsGruppen": {
           "type": "array",
           "items": {
@@ -412,14 +405,6 @@
         },
         "sollProvisionOptimiertWerden": {
           "type": "boolean"
-        },
-        "wunschTyp": {
-          "type": "string",
-          "enum": [
-            "FINANZIERUNGSBEDARF",
-            "SPEZIFISCHER_WUNSCH",
-            "UNSPEZIFISCHER_WUNSCH"
-          ]
         }
       }
     },
@@ -1645,6 +1630,9 @@
           "items": {
             "$ref": "#/definitions/ZusatzProdukt"
           }
+        },
+        "persoenlicheBeratung": {
+          "type": "boolean"
         }
       }
     },
@@ -1886,6 +1874,9 @@
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
+        },
+        "deckblatt": {
+          "$ref": "#/definitions/Deckblatt"
         }
       }
     },
@@ -1897,6 +1888,12 @@
         },
         "flurstueckGroesse": {
           "type": "number"
+        },
+        "flur": {
+          "type": "string"
+        },
+        "flurstueck": {
+          "type": "string"
         }
       }
     },
@@ -2169,6 +2166,21 @@
           "items": {
             "$ref": "#/definitions/WeiteresImmobilienVermoegen"
           }
+        },
+        "arbeitgeberName": {
+          "type": "string"
+        },
+        "branche": {
+          "type": "string"
+        },
+        "telefonnummerVorhanden": {
+          "type": "boolean"
+        },
+        "ausweis": {
+          "$ref": "#/definitions/Ausweis"
+        },
+        "produzentEigeneBestehendeImmobilienKredite": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
@@ -2183,6 +2195,30 @@
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
+        },
+        "eigengenutzeEigentumswohnungVorhanden": {
+          "type": "boolean"
+        },
+        "sonstigeVerbindlichkeitenRestschulden": {
+          "$ref": "#/definitions/Money"
+        },
+        "bestehendeImmobilienDarlehenRestschulden": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Money"
+          }
+        },
+        "ratenkreditRestschulden": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Money"
+          }
+        },
+        "privateDarlehenRestschulden": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Money"
+          }
         }
       }
     },
@@ -3152,6 +3188,38 @@
         "OEFFENTLICHE_MITTEL",
         "VERKAUF_IMMOBILIE"
       ]
+    },
+    "Ausweis": {
+      "type": "object",
+      "properties": {
+        "nummer": {
+          "type": "string"
+        },
+        "ausstellendeBehoerde": {
+          "type": "string"
+        },
+        "art": {
+          "type": "string"
+        },
+        "ausstellungsDatum": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "Deckblatt": {
+      "type": "object",
+      "properties": {
+        "grundbuchVon": {
+          "type": "string"
+        },
+        "blattNr": {
+          "type": "string"
+        },
+        "grundbuchArtAngegeben": {
+          "type": "boolean"
+        }
+      }
     }
   }
 }
