@@ -189,9 +189,11 @@
           "flaecheBauland": 200.0,
           "flaechenDetailsWohnenGewerbe": {
             "gewerbeFlaecheNettoKaltmieteProQmMonatlich": "0,00",
+            "gewerbeFlaecheNettoKaltmieteMonatlich": "0,00",
             "wohnFlaecheEigengenutzt": 100.0,
             "wohnFlaecheMarktpreisProQm": "2.000,00",
-            "wohnFlaecheNettoKaltmieteProQmMonatlich": "0,00"
+            "wohnFlaecheNettoKaltmieteProQmMonatlich": "0,00",
+            "wohnFlaecheNettoKaltmieteMonatlich": "0,00"
           },
           "grundbuecher": [
             {
@@ -511,9 +513,11 @@
             "flaecheBauland": 200.0,
             "flaechenDetailsWohnenGewerbe": {
               "gewerbeFlaecheNettoKaltmieteProQmMonatlich": "0,00",
+              "gewerbeFlaecheNettoKaltmieteMonatlich": "0,00",
               "wohnFlaecheEigengenutzt": 100.0,
               "wohnFlaecheMarktpreisProQm": "2.000,00",
-              "wohnFlaecheNettoKaltmieteProQmMonatlich": "0,00"
+              "wohnFlaecheNettoKaltmieteProQmMonatlich": "0,00",
+              "wohnFlaecheNettoKaltmieteMonatlich": "0,00"
             },
             "grundbuecher": [
               {
