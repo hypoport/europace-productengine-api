@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -2473,29 +2473,39 @@
         "gewerbeFlaecheEigengenutzt": {
           "type": "number"
         },
+        "gewerbeFlaecheVermietet": {
+          "type": "number"
+        },
         "gewerbeFlaecheNettoKaltmieteProQmMonatlich": {
-          "$ref": "#/definitions/Money"
+          "$ref": "#/definitions/Money",
+          "deprecated": true,
+          "description": "Dieses Feld sollte nicht mehr verwendet werden, da es sich um einen berechneten Wert handelt und Rundungsfehler existieren können."
         },
         "gewerbeFlaecheNettoKaltmieteProQmMonatlichOrtsueblich": {
           "$ref": "#/definitions/Money"
         },
-        "gewerbeFlaecheVermietet": {
-          "type": "number"
+        "gewerbeFlaecheNettoKaltmieteMonatlich": {
+          "$ref": "#/definitions/Money"
         },
         "wohnFlaecheEigengenutzt": {
+          "type": "number"
+        },
+        "wohnFlaecheVermietet": {
           "type": "number"
         },
         "wohnFlaecheMarktpreisProQm": {
           "$ref": "#/definitions/Money"
         },
         "wohnFlaecheNettoKaltmieteProQmMonatlich": {
-          "$ref": "#/definitions/Money"
+          "$ref": "#/definitions/Money",
+          "deprecated": true,
+          "description": "Dieses Feld sollte nicht mehr verwendet werden, da es sich um einen berechneten Wert handelt und Rundungsfehler existieren können."
         },
         "wohnFlaecheNettoKaltmieteProQmMonatlichOrtsueblich": {
           "$ref": "#/definitions/Money"
         },
-        "wohnFlaecheVermietet": {
-          "type": "number"
+        "wohnFlaecheNettoKaltmieteMonatlich": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
