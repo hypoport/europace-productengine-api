@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -2464,6 +2464,12 @@
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
+        },
+        "vorlasten": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Vorlast"
+          }
         }
       }
     },
