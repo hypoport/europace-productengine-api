@@ -22,3 +22,9 @@ Die API ist im Swagger-Format 2.0 (direkter Vorläufer von [OpenAPI](https://www
 ### Bindefrist und Bestzins
 
 ### Übersichten
+
+## Release
+
+1. Änderungen committen
+2. neuen Tag passend zu der Version in `api.json` erstellen
+3. beim Push darauf achten, dass auch der Tag gepushed wird (z.B. `git push --follow-tags`)
