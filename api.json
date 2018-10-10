@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -1447,6 +1447,12 @@
             "$ref": "#/definitions/Meldung"
           }
         },
+        "anpassungsHinweise": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DarlehensAnpassungsHinweis"
+          }
+        },
         "finanzierung": {
           "$ref": "#/definitions/FinanzierungsSpezifikation"
         }
@@ -2765,6 +2771,26 @@
         },
         "vertriebsGruppe": {
           "type": "string"
+        }
+      }
+    },
+    "DarlehensAnpassungsHinweis": {
+      "type": "object",
+      "properties": {
+        "zielBeleihungsAuslauf": {
+          "$ref": "#/definitions/Percent"
+        },
+        "fuerProduzentenId": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "mindestSummeDarlehen": {
+          "$ref": "#/definitions/Money"
+        },
+        "hoechstSummeDarlehen": {
+          "$ref": "#/definitions/Money"
+        },
+        "summeWeitererDarlehen": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
