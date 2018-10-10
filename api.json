@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.1.5",
+    "version": "1.2.0",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -85,8 +85,8 @@
         "optionsShowStopperInput": {
           "$ref": "#/definitions/OptionsShowStopperInput"
         },
-        "ratingAntwort": {
-          "$ref": "#/definitions/SpkRatingAntwort"
+        "ratingErgebnis": {
+          "$ref": "#/definitions/RatingErgebnis"
         },
         "schufaDetails": {
           "type": "object",
@@ -2687,26 +2687,21 @@
         }
       }
     },
-    "SpkRatingAntwort": {
+    "RatingErgebnis": {
       "type": "object",
       "properties": {
         "klasse": {
           "type": "integer",
           "format": "int32"
         },
-        "note": {
-          "type": "integer",
-          "format": "int32"
+        "kennzeichenAbgelehnt": {
+          "type": "boolean"
         },
-        "typ": {
-          "type": "string",
-          "enum": [
-            "OK",
-            "FEHLER"
-          ]
+        "betragObligo": {
+          "$ref": "#/definitions/Money"
         },
-        "wert": {
-          "type": "number"
+        "kennzeichenOrgankredit": {
+          "type": "boolean"
         }
       }
     },
