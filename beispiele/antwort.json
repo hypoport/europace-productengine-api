@@ -100,6 +100,7 @@
           "zahlungsweise": "MONATLICH",
           "anfaenglicherTilgungssatz": "3",
           "tilgungsBeginn": "2018-02-28",
+          "tilgungsBeginnArt": "ANGEPASST",
           "tilgungsart": "LAUFEND",
           "optionaleSondertilgung": "5",
           "volltilgung": false,

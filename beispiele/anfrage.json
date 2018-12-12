@@ -640,6 +640,7 @@
           "zahlungsweise": "MONATLICH",
           "anfaenglicherTilgungssatz": "3",
           "tilgungsBeginn": "2018-02-28",
+          "tilgungsBeginnArt": "WUNSCH",
           "tilgungsart": "LAUFEND",
           "volltilgung": false,
           "zinsbindungInMonaten": 240

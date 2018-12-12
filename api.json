@@ -2904,6 +2904,9 @@
               "type": "string",
               "format": "date"
             },
+            "tilgungsBeginnArt": {
+              "$ref": "#/definitions/TilgungsBeginnArt"
+            },
             "tilgungsart": {
               "$ref": "#/definitions/TilgungsArt"
             }
@@ -3111,6 +3114,14 @@
             }
           }
         }
+      ]
+    },
+    "TilgungsBeginnArt": {
+      "type": "string",
+      "enum": [
+        "WUNSCH",
+        "DEFAULT",
+        "ANGEPASST"
       ]
     },
     "TilgungsArt": {
