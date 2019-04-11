@@ -159,7 +159,8 @@
           "sonstigeVerbindlichkeitenRestschulden": "0,00",
           "bestehendeImmobilienDarlehenRestschulden": ["0,00"],
           "ratenkreditRestschulden": ["0,00"],
-          "privateDarlehenRestschulden": ["0,00"]
+          "privateDarlehenRestschulden": ["0,00"],
+          "lebenshaltungsKostenMonatlich": "0,00"
         }
       ],
       "nichtAbzuloesendeDarlehen": [],
