@@ -329,6 +329,7 @@
     },
     "offerWorkflowInput": {
       "fremdProduktInformationen": {
+        "fremdRatenschutzInformationen": [],
         "fremdBausparInformationen": [],
         "fremdDarlehenInformationen": [
           {
