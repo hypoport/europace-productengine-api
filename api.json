@@ -3047,6 +3047,7 @@
           "type": "string",
           "enum": [
             "FESTER_BETRAG",
+            "FESTER_BETRAG_MIT_AUFSCHLAG",
             "REST_VOM_FINANZIERUNGS_BEDARF",
             "ZIEL_BELEIHUNGS_AUSLAUF",
             "ZIEL_BELEIHUNGS_AUSLAUF_VOM_KREDITENTSCHEIDER",
@@ -3080,10 +3081,12 @@
           "$ref": "#/definitions/FestBetragsVorgabe"
         },
         {
-          "aufschlagsVorgaben": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/RatenschutzAufschlagsVorgabe"
+          "properties": {
+            "aufschlagsVorgaben": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/RatenschutzAufschlagsVorgabe"
+              }
             }
           }
         }
