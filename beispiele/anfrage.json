@@ -46,13 +46,7 @@
           "produzent": {
             "value": "CREDIT_LIFE"
           },
-          "versicherungsBeitrag": {
-            "amount": 5370.270000,
-            "positive": true,
-            "currency": "EUR",
-            "zero": false,
-            "negative": false
-          }
+          "versicherungsBeitrag": "5.370,00"
         }
       ]
     },
