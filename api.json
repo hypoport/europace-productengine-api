@@ -3049,7 +3049,6 @@
             "FESTER_BETRAG",
             "FESTER_BETRAG_MIT_AUFSCHLAG",
             "REST_VOM_FINANZIERUNGS_BEDARF",
-            "REST_VOM_FINANZIERUNGS_BEDARF_MIT_AUFSCHLAG",
             "ZIEL_BELEIHUNGS_AUSLAUF",
             "ZIEL_BELEIHUNGS_AUSLAUF_VOM_KREDITENTSCHEIDER",
             "PROZENTUALER_ANTEIL_FINANZIERUNGS_BEDARF",
@@ -3130,23 +3129,6 @@
           "properties": {
             "minimumRestVomFinanzierungsBedarf": {
               "$ref": "#/definitions/Money"
-            }
-          }
-        }
-      ]
-    },
-    "RestVomFinanzierungsBedarfVorgabeMitRatenschutzAufschlag": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/RestVomFinanzierungsBedarfVorgabe"
-        },
-        {
-          "properties": {
-            "aufschlagsVorgaben": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/RatenschutzAufschlagsVorgabe"
-              }
             }
           }
         }
