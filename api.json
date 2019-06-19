@@ -3047,7 +3047,6 @@
           "type": "string",
           "enum": [
             "FESTER_BETRAG",
-            "FESTER_BETRAG_MIT_AUFSCHLAG",
             "REST_VOM_FINANZIERUNGS_BEDARF",
             "ZIEL_BELEIHUNGS_AUSLAUF",
             "ZIEL_BELEIHUNGS_AUSLAUF_VOM_KREDITENTSCHEIDER",
@@ -3061,34 +3060,6 @@
       "allOf": [
         {
           "$ref": "#/definitions/DarlehensBetragsVorgabe"
-        }
-      ]
-    },
-    "RatenschutzAufschlagsVorgabe": {
-      "type": "object",
-      "properties": {
-        "identifier": {
-          "$ref": "#/definitions/Identifier"
-        },
-        "aufschlag": {
-          "$ref": "#/definitions/Money"
-        }
-      }
-    },
-    "FestBetragsVorgabeMitRatenschutzAufschlag": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/FestBetragsVorgabe"
-        },
-        {
-          "properties": {
-            "aufschlagsVorgaben": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/RatenschutzAufschlagsVorgabe"
-              }
-            }
-          }
         }
       ]
     },
