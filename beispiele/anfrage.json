@@ -37,6 +37,17 @@
           "zahlungsWeise": "MONATLICH",
           "zinsBindungInMonaten": 120
         }
+      ],
+      "fremdRatenschutzInformationen": [
+        {
+          "identifier": {
+            "value": "5cf12ac3b50bf51df4925686"
+          },
+          "produzent": {
+            "value": "CREDIT_LIFE"
+          },
+          "versicherungsBeitrag": "5.370,00"
+        }
       ]
     },
     "produzent": {
