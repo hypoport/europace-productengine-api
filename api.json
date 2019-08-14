@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -1648,6 +1648,9 @@
             "$ref": "#/definitions/Verbindlichkeit"
           }
         },
+        "vdpVorhaben": {
+          "$ref": "#/definitions/Vorhaben"
+        },
         "wirdAngebotEmpfohlen": {
           "type": "boolean"
         },
@@ -1683,6 +1686,27 @@
         }
       }
     },
+    "Vorhaben": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "verwendungszweck": {
+          "enum": [
+            "NEUBAU",
+            "KAUF",
+            "KAUF_NEUBAU_VOM_BAUTRAEGER",
+            "MODERNISIERUNG_UMBAU_ANBAU",
+            "ANSCHLUSSFINANZIERUNG",
+            "KAPITALBESCHAFFUNG"
+          ]
+        },
+        "finanzbedarf": {
+          "$ref": "#/definitions/Finanzbedarf"
+        }
+      }
+    },
     "ExterneDrittDarlehen": {
       "type": "object",
       "properties": {
@@ -1713,6 +1737,17 @@
           "$ref": "#/definitions/Identifier"
         },
         "monatlicheRate": {
+          "$ref": "#/definitions/Money"
+        }
+      }
+    },
+    "Finanzbedarf": {
+      "type": "object",
+      "properties": {
+        "grundstuecksKaufpreis": {
+          "$ref": "#/definitions/Money"
+        },
+        "kaufpreis": {
           "$ref": "#/definitions/Money"
         }
       }
@@ -1889,6 +1924,9 @@
             "GUT",
             "SEHR_GUT"
           ]
+        },
+        "vdpImmobilie": {
+          "$ref": "#/definitions/Immobilie"
         }
       }
     },
@@ -1909,6 +1947,21 @@
         }
       }
     },
+    "Erbbaurecht": {
+      "type": "object",
+      "properties": {
+        "erbbaurecht": {
+          "type": "boolean"
+        },
+        "erbbauzinsJaehrlich": {
+          "§ref": "#/definitions/Money"
+        },
+        "laufzeitBisJahr": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
     "Flurstueck": {
       "type": "object",
       "properties": {
@@ -1923,6 +1976,201 @@
         },
         "flurstueck": {
           "type": "string"
+        }
+      }
+    },
+    "Immobilie": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "adresse": {
+          "$ref": "#/definitions/PostAdresse"
+        },
+        "erbbaurecht": {
+          "$ref": "#/definitions/Erbbaurecht"
+        },
+        "autostellplaetze": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AutoStellplatz"
+          }
+        },
+        "wohnlage": {
+          "type": "string",
+          "enum": [
+            "GEHOBEN",
+            "MITTEL",
+            "EINFACH"
+          ]
+        },
+        "keinBaulandFlaecheInQm": {
+          "type": "number"
+        },
+        "grundstueck": {
+          "type": "number"
+        },
+        "gebaeude": {
+          "$ref": "#/definitions/Gebaeude"
+        },
+        "immobilienArt": {
+          "type": "string",
+          "enum": [
+            "KEIN_TYP_AUSGEWAEHLT",
+            "EINFAMILIENHAUS",
+            "EIGENTUMSWOHNUNG",
+            "REIHENHAUS",
+            "DOPPELHAUSHAELFTE",
+            "ZWEIFAMILIENHAUS",
+            "MEHRFAMILIENHAUS",
+            "BAUGRUNDSTUECK"
+          ]
+        },
+        "eigennutzungsFaehigkeit": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Gebaeude": {
+      "type": "object",
+      "properties": {
+        "anzahlVollgeschosse": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ausstattung": {
+          "type": "string",
+          "enum": [
+            "STARK_GEHOBEN",
+            "GEHOBEN",
+            "MITTEL",
+            "EINFACH"
+          ]
+        },
+        "baujahr": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bauweise": {
+          "type": "string",
+          "enum": [
+            "FACHWERK_MIT_STROH_LEHM",
+            "FACHWERK_MIT_ZIEGELN",
+            "GLAS_STAHL",
+            "HOLZ",
+            "MASSIV"
+          ]
+        },
+        "anzahlDerWohneinheiten": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "anzahlDerGewerbeeinheiten": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gewerbeflaeche": {
+          "$ref": "#/definitions/GebaeudeFlaeche"
+        },
+        "aufbauFinanzierung": {
+          "type": "boolean"
+        },
+        "wohnflaeche": {
+          "$ref": "#/definitions/GebaeudeFlaeche"
+        },
+        "einliegerwohnungVorhanden": {
+          "type": "boolean"
+        },
+        "istFertighaus": {
+          "type": "boolean"
+        },
+        "hausAnordnung": {
+          "type": "string",
+          "enum": [
+            "FREISTEHEND",
+            "KOPFHAUS",
+            "MITTELHAUS"
+          ]
+        },
+        "zustand": {
+          "type": "string",
+          "enum": [
+            "SEHR_GUT",
+            "GUT",
+            "MITTEL",
+            "MAESSIG",
+            "SCHLECHT"
+          ]
+        },
+        "unterkellerung": {
+          "type": "string",
+          "enum": [
+            "UNTERKELLERT",
+            "TEILWEISE_UNTERKELLERT",
+            "NICHT_UNTERKELLERT"
+          ]
+        },
+        "dachgeschossArt": {
+          "type": "string",
+          "enum": [
+            "VOLL_AUSGEBAUT",
+            "TEILWEISE_AUSGEBAUT",
+            "NICHT_AUSGEBAUT",
+            "FLACHDACH"
+          ]
+        }
+      }
+    },
+    "GebaeudeFlaeche": {
+      "type": "object",
+      "properties": {
+        "vermietungsInformationen": {
+          "$ref": "#/definitions/VermietungsInformationen"
+        },
+        "gesamtGroesse": {
+          "type": "number"
+        }
+      }
+    },
+    "VermietungsInformationen": {
+      "type": "object",
+      "properties": {
+        "nutzungsArt": {
+          "type": "string",
+          "enum": [
+            "EIGENGENUTZT",
+            "VERMIETET",
+            "TEIL_VERMIETET"
+          ]
+        },
+        "mieteinnahmenNettoKaltMonatlich": {
+          "$ref": "#/definitions/Money"
+        },
+        "vermieteteFlaeche": {
+          "type": "number"
+        }
+      }
+    },
+    "AutoStellplatz": {
+      "type": "object",
+      "properties": {
+        "typ": {
+          "type": "string",
+          "enum": [
+            "STELLPLATZ",
+            "CARPORT",
+            "GARAGE",
+            "DOPPEL_GARAGE",
+            "KELLER_GARAGE",
+            "TIEFGARAGEN_STELLPLATZ"
+          ]
+        },
+        "vermietet": {
+          "type": "boolean"
+        },
+        "mieteMonatlich": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
