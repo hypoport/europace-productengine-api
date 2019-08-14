@@ -6,11 +6,11 @@ Diese API ist für Produktanbieter, die Angebote liefern wollen. Das bedeutet, e
 
 erfolgen nach dem [Fork/PR-Pattern von Github](https://guides.github.com/activities/forking/).
 
-### Release
+### Release (durch Maintainer)
 
-1. Änderungen committen
-2. neuen Tag passend zu der Version in `api.json` erstellen
-3. beim Push darauf achten, dass auch der Tag gepushed wird (z.B. `git push --follow-tags`)
+1. neuen Tag passend zu der Version in `api.json` erstellen
+   * über die Github-Web-Oberfläche
+   * oder lokal, dann beim Push darauf achten, dass auch der Tag gepushed wird (z.B. `git push --follow-tags`)
 
 ## Arbeiten mit der API
 

@@ -37,6 +37,17 @@
           "zahlungsWeise": "MONATLICH",
           "zinsBindungInMonaten": 120
         }
+      ],
+      "fremdRatenschutzInformationen": [
+        {
+          "identifier": {
+            "value": "5cf12ac3b50bf51df4925686"
+          },
+          "produzent": {
+            "value": "CREDIT_LIFE"
+          },
+          "versicherungsBeitrag": "5.370,00"
+        }
       ]
     },
     "produzent": {
@@ -159,7 +170,8 @@
           "sonstigeVerbindlichkeitenRestschulden": "0,00",
           "bestehendeImmobilienDarlehenRestschulden": ["0,00"],
           "ratenkreditRestschulden": ["0,00"],
-          "privateDarlehenRestschulden": ["0,00"]
+          "privateDarlehenRestschulden": ["0,00"],
+          "lebenshaltungsKostenMonatlich": "0,00"
         }
       ],
       "nichtAbzuloesendeDarlehen": [],
@@ -328,6 +340,7 @@
     },
     "offerWorkflowInput": {
       "fremdProduktInformationen": {
+        "fremdRatenschutzInformationen": [],
         "fremdBausparInformationen": [],
         "fremdDarlehenInformationen": [
           {

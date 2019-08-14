@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.2.3",
+    "version": "1.2.6",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -1336,6 +1336,12 @@
     "FremdProduktInformationen": {
       "type": "object",
       "properties": {
+        "fremdRatenschutzInformationen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FremdRatenschutzInformation"
+          }
+        },
         "fremdBausparInformationen": {
           "type": "array",
           "items": {
@@ -1382,6 +1388,20 @@
         },
         "showStopperVorhanden": {
           "type": "boolean"
+        }
+      }
+    },
+    "FremdRatenschutzInformation": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "produzent": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "versicherungsBeitrag": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
