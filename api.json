@@ -1954,7 +1954,7 @@
           "type": "boolean"
         },
         "erbbauzinsJaehrlich": {
-          "§ref": "#/definitions/Money"
+          "$ref": "#/definitions/Money"
         },
         "laufzeitBisJahr": {
           "type": "integer",
