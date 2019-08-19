@@ -2006,10 +2006,10 @@
           ]
         },
         "keinBaulandFlaecheInQm": {
-          "type": "number"
+          "$ref": "#/definitions/Flaeche"
         },
         "grundstueck": {
-          "type": "number"
+          "$ref": "#/definitions/Grundstueck"
         },
         "gebaeude": {
           "$ref": "#/definitions/Gebaeude"
@@ -2032,6 +2032,17 @@
         }
       }
     },
+    "Flaeche": {
+      "type": "number"
+    },
+    "Grundstueck": {
+      "type": "object",
+      "properties": {
+        "groesse": {
+          "$ref": "#/definitions/Flaeche"
+        }
+      }
+    },
     "Gebaeude": {
       "type": "object",
       "properties": {
@@ -2049,8 +2060,7 @@
           ]
         },
         "baujahr": {
-          "type": "integer",
-          "format": "int32"
+          "$ref": "#/definitions/Jahreszahl"
         },
         "bauweise": {
           "type": "string",
@@ -2129,9 +2139,13 @@
           "$ref": "#/definitions/VermietungsInformationen"
         },
         "gesamtGroesse": {
-          "type": "number"
+          "$ref": "#/definitions/Flaeche"
         }
       }
+    },
+    "Jahreszahl": {
+      "type": "integer",
+      "format": "int32"
     },
     "VermietungsInformationen": {
       "type": "object",
@@ -2148,7 +2162,7 @@
           "$ref": "#/definitions/Money"
         },
         "vermieteteFlaeche": {
-          "type": "number"
+          "$ref": "#/definitions/Flaeche"
         }
       }
     },
