@@ -1957,8 +1957,7 @@
           "$ref": "#/definitions/Money"
         },
         "laufzeitBisJahr": {
-          "type": "integer",
-          "format": "int32"
+          "$ref": "#/definitions/VdpJahreszahl"
         }
       }
     },
@@ -2006,7 +2005,7 @@
           ]
         },
         "keinBaulandFlaecheInQm": {
-          "$ref": "#/definitions/Flaeche"
+          "$ref": "#/definitions/VdpFlaeche"
         },
         "grundstueck": {
           "$ref": "#/definitions/Grundstueck"
@@ -2032,17 +2031,6 @@
         }
       }
     },
-    "Flaeche": {
-      "type": "number"
-    },
-    "Grundstueck": {
-      "type": "object",
-      "properties": {
-        "groesse": {
-          "$ref": "#/definitions/Flaeche"
-        }
-      }
-    },
     "Gebaeude": {
       "type": "object",
       "properties": {
@@ -2060,7 +2048,7 @@
           ]
         },
         "baujahr": {
-          "$ref": "#/definitions/Jahreszahl"
+          "$ref": "#/definitions/VdpJahreszahl"
         },
         "bauweise": {
           "type": "string",
@@ -2139,13 +2127,34 @@
           "$ref": "#/definitions/VermietungsInformationen"
         },
         "gesamtGroesse": {
-          "$ref": "#/definitions/Flaeche"
+          "$ref": "#/definitions/VdpFlaeche"
         }
       }
     },
-    "Jahreszahl": {
-      "type": "integer",
-      "format": "int32"
+    "VdpFlaeche": {
+      "type": "object",
+      "properties": {
+        "wert": {
+          "type": "number"
+        }
+      }
+    },
+    "Grundstueck": {
+      "type": "object",
+      "properties": {
+        "groesse": {
+          "$ref": "#/definitions/VdpFlaeche"
+        }
+      }
+    },
+    "VdpJahreszahl": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
     },
     "VermietungsInformationen": {
       "type": "object",
@@ -2162,7 +2171,7 @@
           "$ref": "#/definitions/Money"
         },
         "vermieteteFlaeche": {
-          "$ref": "#/definitions/Flaeche"
+          "$ref": "#/definitions/VdpFlaeche"
         }
       }
     },
