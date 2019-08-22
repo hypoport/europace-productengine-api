@@ -246,6 +246,89 @@
           "nutzungsArt": "EIGENNUTZUNG",
           "objektArt": "EINFAMILIENHAUS",
           "stellplaetze": {},
+          "vdpImmobilie": {
+            "id": "123456",
+            "adresse": {
+              "hausNummer": "12",
+              "land": null,
+              "ort": "STADT",
+              "postFach": null,
+              "postLeitZahl": "99999",
+              "strasse": "Strasse"
+            },
+            "erbbaurecht": {
+              "erbbaurecht": true,
+              "erbbauzinsJaehrlich": "2000,0",
+              "laufzeitBisJahr": {
+                "value": 10
+              }
+            },
+            "autostellplaetze": [
+              {
+                "typ": "STELLPLATZ",
+                "vermietet": true,
+                "mieteMonatlich": "100,0"
+              },
+              {
+                "typ": "GARAGE",
+                "vermietet": false,
+                "mieteMonatlich": null
+              }
+            ],
+            "wohnlage": "EINFACH",
+            "keinBaulandFlaecheInQm": {
+              "wert": 500.0
+            },
+            "grundstueck": {
+              "groesse": {
+                "wert": 500.0
+              }
+            },
+            "gebaeude": {
+              "anzahlVollgeschosse": 1,
+              "ausstattung": "STARK_GEHOBEN",
+              "baujahr": {
+                "value": 10
+              }
+              ,
+              "bauweise": "GLAS_STAHL",
+              "anzahlDerWohneinheiten": 2,
+              "anzahlDerGewerbeeinheiten": 3,
+              "gewerbeflaeche": {
+                "vermietungsInformationen": {
+                  "nutzungsArt": "EIGENGENUTZT",
+                  "mieteinnahmenNettoKaltMonatlich": "100,0",
+                  "vermieteteFlaeche": {
+                    "wert": 500.0
+                  }
+                },
+                "gesamtGroesse": {
+                  "wert": 500.0
+                }
+              },
+              "aufbauFinanzierung": false,
+              "wohnflaeche": {
+                "vermietungsInformationen": {
+                  "nutzungsArt": "TEIL_VERMIETET",
+                  "mieteinnahmenNettoKaltMonatlich": "200,0",
+                  "vermieteteFlaeche": {
+                    "wert": 1000.0
+                  }
+                },
+                "gesamtGroesse": {
+                  "wert": 2000.0
+                }
+              },
+              "einliegerwohnungVorhanden": true,
+              "istFertighaus": true,
+              "hausAnordnung": "FREISTEHEND",
+              "zustand": "SEHR_GUT",
+              "unterkellerung": "NICHT_UNTERKELLERT",
+              "dachgeschossArt": "NICHT_AUSGEBAUT"
+            },
+            "immobilienArt": "KEIN_TYP_AUSGEWAEHLT",
+            "eigennutzungsFaehigkeit": false
+          },
           "verwendungsZweck": "KAUF",
           "vorlasten": [],
           "wohnlage": "SEHR_GUT"
@@ -259,6 +342,14 @@
           "8724526656130335"
         ],
         "kreditInstitut": "Testumgebung"
+      },
+      "vdpVorhaben": {
+        "id": "1234",
+        "verwendungszweck": "NEUBAU",
+        "finanzbedarf": {
+          "grundstuecksKaufpreis": "20000,00",
+          "kaufpreis": "100000,00"
+        }
       },
       "verbindlichkeiten": [],
       "zusaetzlicheKapitalBeschaffung": "0,00",
