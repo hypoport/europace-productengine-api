@@ -2271,6 +2271,12 @@
         },
         "lebenshaltungsKostenMonatlich": {
           "$ref": "#/definitions/Money"
+        },
+        "vermoegensWerte": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZusatzProdukt"
+          }
         }
       }
     },
