@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Europace Product Engine API",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "description": "PAPI"
   },
   "host": "localhost:8080",
@@ -1889,6 +1889,26 @@
             "GUT",
             "SEHR_GUT"
           ]
+        },
+        "vdpObjektbewertung": {
+          "$ref": "#/definitions/VdpObjektbewertung"
+        }
+      }
+    },
+    "VdpObjektbewertung": {
+      "type": "object",
+      "properties": {
+        "meldungen": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Meldung"
+          }
+        },
+        "marktwert": {
+          "$ref": "#/definitions/Money"
+        },
+        "statusAdressSuche": {
+          "type": "string"
         }
       }
     },
@@ -2251,6 +2271,12 @@
         },
         "lebenshaltungsKostenMonatlich": {
           "$ref": "#/definitions/Money"
+        },
+        "vermoegensWerte": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZusatzProdukt"
+          }
         }
       }
     },
