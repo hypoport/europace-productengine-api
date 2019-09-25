@@ -172,7 +172,28 @@
           "ratenkreditRestschulden": ["0,00"],
           "privateDarlehenRestschulden": ["0,00"],
           "lebenshaltungsKostenMonatlich": "0,00",
-          "vermoegensWerte": []
+          "vermoegensWerte": [
+            {
+              "abtretungsBetrag": "20.000,00",
+              "art": "KAPITALBILDENDE_RENTENVERSICHERUNG",
+              "einmalZahlung": "500,00",
+              "emittent": "SPK_MUSTER",
+              "identifier": "1234567",
+              "rateMonatlich": "500,00",
+              "vertragsDatum": "2018-01-31",
+              "vertragsEnde": "2029-01-31",
+              "vertragsSumme": "40.000,00",
+              "verwendung": "NICHT_UNTERSTUETZT",
+              "zahlungsStrom": [],
+              "zusatzkosten": {
+                "einmaligeKosten": "500,00",
+                "laufendeKosten": {
+                  "kosten": "200,00",
+                  "zahlungsWeise": "MONATLICH"
+                }
+              }
+            }
+          ]
         }
       ],
       "nichtAbzuloesendeDarlehen": [],
@@ -249,7 +270,32 @@
           "stellplaetze": {},
           "verwendungsZweck": "KAUF",
           "vorlasten": [],
-          "wohnlage": "SEHR_GUT"
+          "wohnlage": "SEHR_GUT",
+          "vdpObjektbewertung": {
+            "meldungen": [
+              {
+                "kategorie": "MACHBARKEIT_UNTER_VORBEHALT_VOLLSTAENDIGER_DATEN",
+                "code": "code",
+                "sichtbarkeit": "OHNE_EINSCHRAENKUNG",
+                "text": "text text",
+                "referenzen": []
+              },
+              {
+                "kategorie": "MACHBARKEIT_UNTER_VORBEHALT_VOLLSTAENDIGER_DATEN",
+                "code": "code.2",
+                "sichtbarkeit": "OHNE_EINSCHRAENKUNG",
+                "text": "text text text",
+                "referenzen": [
+                  {
+                    "businessObjektId": "objekt123",
+                    "zuordnung": "OBJEKT"
+                  }
+                ]
+              }
+            ],
+            "marktwert": "300.000,00",
+            "statusAdressSuche": ""
+          }
         }
       ],
       "ratenEinzugsKonto": {
@@ -498,7 +544,28 @@
             "bestehendeImmobilienDarlehenRestschulden": ["0,00"],
             "ratenkreditRestschulden": ["0,00"],
             "privateDarlehenRestschulden": ["0,00"],
-            "vermoegensWerte": []
+            "vermoegensWerte": [
+              {
+                "abtretungsBetrag": "20.000,00",
+                "art": "KAPITALBILDENDE_RENTENVERSICHERUNG",
+                "einmalZahlung": "500,00",
+                "emittent": "SPK_MUSTER",
+                "identifier": "1234567",
+                "rateMonatlich": "500,00",
+                "vertragsDatum": "2018-01-31",
+                "vertragsEnde": "2029-01-31",
+                "vertragsSumme": "40.000,00",
+                "verwendung": "NICHT_UNTERSTUETZT",
+                "zahlungsStrom": [],
+                "zusatzkosten": {
+                  "einmaligeKosten": "500,00",
+                  "laufendeKosten": {
+                    "kosten": "200,00",
+                    "zahlungsWeise": "MONATLICH"
+                  }
+                }
+              }
+            ]
           }
         ],
         "nichtAbzuloesendeDarlehen": [],
