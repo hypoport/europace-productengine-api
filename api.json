@@ -392,13 +392,7 @@
           }
         },
         "finanzierungsArt": {
-          "type": "string",
-          "enum": [
-            "NACHFINANZIERUNG",
-            "NEUFINANZIERUNG",
-            "PROLONGATION",
-            "UMSCHULDUNG"
-          ]
+          "$ref": "#/definitions/FinanzierungsArt"
         },
         "finanzierungsBedarf": {
           "$ref": "#/definitions/Money"
@@ -410,6 +404,14 @@
           "type": "boolean"
         }
       }
+    },
+    "FinanzierungsArt": {
+      "type": "string",
+      "enum": [
+        "NEUFINANZIERUNG",
+        "PROLONGATION",
+        "UMSCHULDUNG"
+      ]
     },
     "SchufaDetails": {
       "type": "object",
@@ -609,13 +611,7 @@
           "$ref": "#/definitions/FinanzcheckDetails"
         },
         "finanzierungsArt": {
-          "type": "string",
-          "enum": [
-            "NACHFINANZIERUNG",
-            "NEUFINANZIERUNG",
-            "PROLONGATION",
-            "UMSCHULDUNG"
-          ]
+          "$ref": "#/definitions/FinanzierungsArt"
         },
         "kapitalVerwendungDetails": {
           "$ref": "#/definitions/KapitalVerwendungsDetails"
@@ -2804,13 +2800,7 @@
           }
         },
         "finanzierungsart": {
-          "type": "string",
-          "enum": [
-            "NACHFINANZIERUNG",
-            "NEUFINANZIERUNG",
-            "PROLONGATION",
-            "UMSCHULDUNG"
-          ]
+          "$ref": "#/definitions/FinanzierungsArt"
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
