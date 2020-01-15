@@ -2191,9 +2191,6 @@
         "verbindlichkeitenAenderungOhneImmobilienKrediteNachZuVorfinanzierung": {
           "$ref": "#/definitions/Money"
         },
-        "verbindlichkeitenImmobilienKrediteNachFinanzierung": {
-          "$ref": "#/definitions/Money"
-        },
         "verbindlichkeitenOhneImmobilienKrediteNachFinanzierung": {
           "$ref": "#/definitions/Money"
         },
