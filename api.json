@@ -2322,9 +2322,6 @@
         "kreditRaten": {
           "$ref": "#/definitions/Money"
         },
-        "kreditratenBestandsobjekte": {
-          "$ref": "#/definitions/Money"
-        },
         "lebensVersicherungsBeitraege": {
           "$ref": "#/definitions/Money"
         },
