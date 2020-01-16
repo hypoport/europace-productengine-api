@@ -8,9 +8,8 @@ erfolgen nach dem [Fork/PR-Pattern von Github](https://guides.github.com/activit
 
 ### Release (durch Maintainer)
 
-1. neuen Tag passend zu der Version in `api.json` erstellen
-   * über die Github-Web-Oberfläche
-   * oder lokal, dann beim Push darauf achten, dass auch der Tag gepushed wird (z.B. `git push --follow-tags`)
+* Aus dem draft-Release ein richtiges Release machen
+* dabei einen neuen Tag passend zu der Version in `api.json` erstellen
 
 ## Arbeiten mit der API
 
