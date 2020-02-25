@@ -379,9 +379,6 @@
             "$ref": "#/definitions/BausparOption"
           }
         },
-        "beleihungsWertSchaetzungDesVertriebes": {
-          "$ref": "#/definitions/Money"
-        },
         "beratungsHonorar": {
           "$ref": "#/definitions/Money"
         },
@@ -2784,9 +2781,6 @@
     "FinanzierungsSpezifikation": {
       "type": "object",
       "properties": {
-        "beleihungswertschaetzungDesVertriebes": {
-          "$ref": "#/definitions/Money"
-        },
         "darlehen": {
           "type": "array",
           "items": {
