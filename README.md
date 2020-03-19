@@ -4,7 +4,8 @@ Diese API ist für Produktanbieter, die Angebote liefern wollen. Das bedeutet, e
 
 ## Arbeiten an der API
 
-erfolgen nach dem [Fork/PR-Pattern von Github](https://guides.github.com/activities/forking/).
+müssen über temporäre Feature-Branches und Pull Requests integriert werden. 
+Mergen ist erst möglich, wenn mindestens eine Review mit Status 'Approved' eines Codeowners vorliegt.
 
 ### Release (durch Maintainer)
 
