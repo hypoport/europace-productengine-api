@@ -4,12 +4,14 @@ Diese API ist für Produktanbieter, die Angebote liefern wollen. Das bedeutet, e
 
 ## Arbeiten an der API
 
-erfolgen nach dem [Fork/PR-Pattern von Github](https://guides.github.com/activities/forking/).
+müssen über temporäre Feature-Branches und Pull Requests integriert werden. 
+Mergen ist erst möglich, wenn mindestens eine Review mit Status 'Approved' eines Codeowners vorliegt.
 
 ### Release (durch Maintainer)
 
 * Aus dem draft-Release ein richtiges Release machen
-* dabei einen neuen Tag passend zu der Version in `api.json` erstellen
+* dabei einen neuen Tag erstellen. Die Version in `api.json` verbleibt bei <major>.<minor>-DUMMY (bspw. 1.3-DUMMY), 
+um unnötige Kommentarzeilen-Änderungen in den generierten API-Klassen durch die OpenAPI-CodeGenerierung zu vermeiden.
 
 ## Arbeiten mit der API
 
