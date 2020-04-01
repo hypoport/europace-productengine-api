@@ -294,7 +294,8 @@
             ],
             "marktwert": "300.000,00",
             "statusAdressSuche": ""
-          }
+          },
+          "beleihungswertVorgabe": "200.000,00"
         }
       ],
       "ratenEinzugsKonto": {
