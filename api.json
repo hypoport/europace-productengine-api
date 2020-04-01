@@ -1885,6 +1885,9 @@
         },
         "vdpObjektbewertung": {
           "$ref": "#/definitions/VdpObjektbewertung"
+        },
+        "beleihungswertVorgabe": {
+          "$ref": "#/definitions/Money"
         }
       }
     },
