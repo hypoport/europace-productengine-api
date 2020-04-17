@@ -893,6 +893,9 @@
         "europaceGebuehrPraezise": {
           "$ref": "#/definitions/Money"
         },
+        "europaceGebuehrIstSteuerpflichtig": {
+          "type": "boolean"
+        },
         "kalkulatorischeLaufzeitInMonaten": {
           "type": "integer",
           "format": "int32"
@@ -3027,6 +3030,9 @@
           "items": {
             "type": "string"
           }
+        },
+        "istEigenvertrieb": {
+          "type": "boolean"
         }
       }
     },
