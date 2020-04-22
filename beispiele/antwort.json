@@ -454,6 +454,7 @@
           "einstandZinsInklMargenaufschlaege": "2,23",
           "europaceGebuehr": "168,00",
           "europaceGebuehrPraezise": "168,00",
+          "europaceGebuehrIstSteuerpflichtig": true,
           "kalkulatorischeLaufzeitInMonaten": 296,
           "kontofuehrungsGebuehrProJahr": "0,00",
           "kundenEffektivzins": "2,412",

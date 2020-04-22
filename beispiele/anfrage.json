@@ -724,7 +724,8 @@
           "tilgungsBeginnArt": "WUNSCH",
           "tilgungsart": "LAUFEND",
           "volltilgung": false,
-          "zinsbindungInMonaten": 240
+          "zinsbindungInMonaten": 240,
+          "istEigenvertrieb": true
         }
       ],
       "finanzierungsart": "NEUFINANZIERUNG",
