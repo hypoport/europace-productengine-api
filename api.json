@@ -1629,6 +1629,12 @@
             "$ref": "#/definitions/DarlehenEinerImmobilie"
           }
         },
+        "annuitaetenDarlehenWuenscheOhneAuszahlungsDatum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identifier"
+          }
+        },
         "objekte": {
           "type": "array",
           "items": {

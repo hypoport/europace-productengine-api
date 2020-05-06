@@ -196,6 +196,7 @@
         }
       ],
       "nichtAbzuloesendeDarlehen": [],
+      "annuitaetenDarlehenWuenscheOhneAuszahlungsDatum": [],
       "objekte": [
         {
           "adresse": {
