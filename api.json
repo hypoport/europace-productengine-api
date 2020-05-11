@@ -126,9 +126,11 @@
           "enum": [
             "ANNUITAET",
             "FORWARD",
+            "FOERDER",
             "KFW",
             "KONSTANT",
             "PRIVAT",
+            "SINGULAERES_FOERDER",
             "SINGULAERES_KFW",
             "VARIABLES_DARLEHEN",
             "ZWIFI"
@@ -231,6 +233,43 @@
         }
       ]
     },
+    "FoerderOption": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/GemeinsameAttributeDarlehensOption"
+        },
+        {
+          "properties": {
+            "programmNummer": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "zinsbindungInMonaten": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "laufzeitInMonaten": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "tilgungsfreieAnlaufzeitInJahren": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "tilgungsArt": {
+              "$ref": "#/definitions/TilgungsArt"
+            },
+            "tilgungsOption": {
+              "$ref": "#/definitions/TilgungsOption"
+            },
+            "energieEffizienzStandard": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      ]
+    },
     "KfwOption": {
       "allOf": [
         {
@@ -298,6 +337,20 @@
             },
             "tilgungsArt": {
               "$ref": "#/definitions/TilgungsArt"
+            }
+          }
+        }
+      ]
+    },
+    "SingulaereFoerderOption": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DarlehensOption"
+        },
+        {
+          "properties": {
+            "bezugsOption": {
+              "$ref": "#/definitions/FoerderOption"
             }
           }
         }
@@ -488,6 +541,7 @@
             "BAUSPARSOFORTDARLEHEN",
             "CAPDARLEHEN",
             "FORWARDDARLEHEN",
+            "FOERDERDARLEHEN",
             "KFWDARLEHEN",
             "KONSTANTDARLEHEN",
             "RIESTERBAUSPARSOFORTDARLEHEN",
@@ -511,6 +565,9 @@
         "endeZinsbindung": {
           "type": "string",
           "format": "date"
+        },
+        "foerderDarlehenInformation": {
+          "$ref": "#/definitions/FoerderDarlehenInformation"
         },
         "identifier": {
           "$ref": "#/definitions/Identifier"
@@ -3037,6 +3094,19 @@
       }
     },
     "KfwDarlehenInformation": {
+      "type": "object",
+      "properties": {
+        "programmNummer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tilgungsfreieAnlaufzeitInMonaten": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "FoerderDarlehenInformation": {
       "type": "object",
       "properties": {
         "programmNummer": {

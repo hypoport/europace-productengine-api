@@ -25,11 +25,46 @@
             "programmNummer": 124,
             "tilgungsfreieAnlaufzeitInMonaten": 12
           },
+          "foerderDarlehenInformation": {
+            "programmNummer": 201,
+            "tilgungsfreieAnlaufzeitInMonaten": 36
+          },
           "monatlicheRate": "167,70",
           "produzentenId": {
             "value": "KFW"
           },
           "produzentLangname": "KfW",
+          "restschuldNachZinsbindung": "27.212,04",
+          "sollzins": "1,4",
+          "tilgungsErsatzProdukte": [],
+          "tilgungsart": "LAUFEND",
+          "zahlungsWeise": "MONATLICH",
+          "zinsBindungInMonaten": 120
+        },
+        {
+          "anfaenglicherTilgungssatz": "3,508",
+          "auszahlungsDatum": "2018-01-31",
+          "auszahlungsKurs": "100",
+          "bausteinOrdnung": "GEMEINSAM",
+          "bereitstellungsZins": "3",
+          "darlehensBetrag": "41.000,00",
+          "darlehensTyp": "FOERDERDARLEHEN",
+          "effektivzins": "1,41",
+          "einstandsDatum": "2018-01-11T12:11:14.265Z",
+          "endeZinsbindung": "2028-01-31",
+          "identifier": {
+            "value": "6266253156150112"
+          },
+          "kalkulatorischeLaufzeitInMonaten": 300,
+          "foerderDarlehenInformation": {
+            "programmNummer": 201,
+            "tilgungsfreieAnlaufzeitInMonaten": 36
+          },
+          "monatlicheRate": "167,70",
+          "produzentenId": {
+            "value": "L_BANK"
+          },
+          "produzentLangname": "L-BANK",
           "restschuldNachZinsbindung": "27.212,04",
           "sollzins": "1,4",
           "tilgungsErsatzProdukte": [],
@@ -375,6 +410,31 @@
               "laufzeitInMonaten": 300,
               "tilgungsfreieAnlaufzeitInJahren": 1,
               "tilgungsArt": "LAUFEND"
+            },
+            {
+              "darlehensOptionsTyp": "FOERDER",
+              "identifier": {
+                "value": "6266253156150158"
+              },
+              "darlehensgeber": {
+                "value": "L_BANK"
+              },
+              "kreditEntscheider": {
+                "value": "SPK_MUSTER"
+              },
+              "auszahlungsDatum": "2018-01-31",
+              "darlehensBetragsVorgabe": {
+                "darlehensBetragsVorgabeTyp": "FESTER_BETRAG",
+                "betrag": "41.000,00"
+              },
+              "provisionsOption": {
+                "gesamtProvision": "0"
+              },
+              "programmNummer": 124,
+              "zinsbindungInMonaten": 120,
+              "laufzeitInMonaten": 300,
+              "tilgungsfreieAnlaufzeitInJahren": 1,
+              "tilgungsArt": "LAUFEND"
             }
           ],
           "position": 1
@@ -414,6 +474,37 @@
               "value": "KFW"
             },
             "produzentLangname": "KfW",
+            "restschuldNachZinsbindung": "27.212,04",
+            "sollzins": "1,4",
+            "tilgungsErsatzProdukte": [],
+            "tilgungsart": "LAUFEND",
+            "zahlungsWeise": "MONATLICH",
+            "zinsBindungInMonaten": 120
+          },
+          {
+            "anfaenglicherTilgungssatz": "3,508",
+            "auszahlungsDatum": "2018-01-31",
+            "auszahlungsKurs": "100",
+            "bausteinOrdnung": "GEMEINSAM",
+            "bereitstellungsZins": "3",
+            "darlehensBetrag": "41.000,00",
+            "darlehensTyp": "FOERDERDARLEHEN",
+            "effektivzins": "1,41",
+            "einstandsDatum": "2018-01-11T12:11:14.265Z",
+            "endeZinsbindung": "2028-01-31",
+            "identifier": {
+              "value": "6266253156150159"
+            },
+            "kalkulatorischeLaufzeitInMonaten": 300,
+            "foerderDarlehenInformation": {
+              "programmNummer": 201,
+              "tilgungsfreieAnlaufzeitInMonaten": 36
+            },
+            "monatlicheRate": "167,70",
+            "produzentenId": {
+              "value": "L_BANK"
+            },
+            "produzentLangname": "L-BANK",
             "restschuldNachZinsbindung": "27.212,04",
             "sollzins": "1,4",
             "tilgungsErsatzProdukte": [],
