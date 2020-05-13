@@ -883,7 +883,12 @@
           "optionaleSondertilgung": "5",
           "volltilgung": false,
           "zinsbindungInMonaten": 240,
-          "aktionsLabels": [ "Sonderaktion" ]
+          "aktionsLabels": [
+            "Sonderaktion"
+          ],
+          "meldungsCodes": [
+            "meldung.code"
+          ]
         },
         "tilgungsPlan": {
           "abschlussKosten": "0,00",

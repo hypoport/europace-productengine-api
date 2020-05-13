@@ -3037,6 +3037,12 @@
             "type": "string"
           }
         },
+        "meldungsCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "istEigenvertrieb": {
           "type": "boolean"
         }
