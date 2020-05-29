@@ -2901,6 +2901,9 @@
             "zinsbindungInMonaten": {
               "type": "integer",
               "format": "int32"
+            },
+            "auszahlungsDatumArt": {
+              "$ref": "#/definitions/AuszahlungsDatumArt"
             }
           }
         }
@@ -3234,6 +3237,14 @@
         "WUNSCH",
         "DEFAULT",
         "ANGEPASST"
+      ]
+    },
+    "AuszahlungsDatumArt": {
+      "type": "string",
+      "enum": [
+        "IM_WUNSCH_ANGEGEBEN",
+        "DEFAULT",
+        "KEINE_ANGABE"
       ]
     },
     "TilgungsArt": {

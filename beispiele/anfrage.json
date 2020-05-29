@@ -816,6 +816,7 @@
           "tilgungsart": "LAUFEND",
           "volltilgung": false,
           "zinsbindungInMonaten": 240,
+          "auszahlungsDatumArt": "DEFAULT",
           "istEigenvertrieb": true
         }
       ],
