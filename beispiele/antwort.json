@@ -104,7 +104,8 @@
           "tilgungsart": "LAUFEND",
           "optionaleSondertilgung": "5",
           "volltilgung": false,
-          "zinsbindungInMonaten": 240
+          "zinsbindungInMonaten": 240,
+          "auszahlungsDatumArt": "DEFAULT"
         }
       ],
       "finanzierungsart": "NEUFINANZIERUNG",
@@ -883,6 +884,7 @@
           "optionaleSondertilgung": "5",
           "volltilgung": false,
           "zinsbindungInMonaten": 240,
+          "auszahlungsDatumArt": "DEFAULT",
           "aktionsLabels": [ "Sonderaktion" ]
         },
         "tilgungsPlan": {
