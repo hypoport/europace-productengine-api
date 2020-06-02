@@ -2902,8 +2902,8 @@
               "type": "integer",
               "format": "int32"
             },
-            "auszahlungsDatumArt": {
-              "$ref": "#/definitions/AuszahlungsDatumArt"
+            "auszahlungsDatumHerkunft": {
+              "$ref": "#/definitions/AuszahlungsDatumHerkunft"
             }
           }
         }
@@ -3239,7 +3239,7 @@
         "ANGEPASST"
       ]
     },
-    "AuszahlungsDatumArt": {
+    "AuszahlungsDatumHerkunft": {
       "type": "string",
       "enum": [
         "IM_WUNSCH_ANGEGEBEN",
