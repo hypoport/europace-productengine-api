@@ -368,6 +368,7 @@
               },
               "bereitstellungszinsenFreieZeitInMonaten": 2,
               "auszahlungsDatum": "2018-01-31",
+              "auszahlungsDatumHerkunft": "DEFAULT",
               "zahlungsWeise": "MONATLICH",
               "darlehensBetragsVorgabe": {
                 "darlehensBetragsVorgabeTyp": "FESTER_BETRAG",
