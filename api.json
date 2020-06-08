@@ -223,6 +223,13 @@
               "$ref": "#/definitions/BausparOption"
             }
           }
+        },
+        {
+          "properties": {
+            "auszahlungsDatumHerkunft": {
+              "$ref": "#/definitions/AuszahlungsDatumHerkunft"
+            }
+          }
         }
       ]
     },
