@@ -221,11 +221,7 @@
           "properties": {
             "ausgesetztDurchBausparvertrag": {
               "$ref": "#/definitions/BausparOption"
-            }
-          }
-        },
-        {
-          "properties": {
+            },
             "auszahlungsDatumHerkunft": {
               "$ref": "#/definitions/AuszahlungsDatumHerkunft"
             }
