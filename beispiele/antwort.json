@@ -4172,6 +4172,7 @@
       }
     ],
     "elektronischeUnterlagenEinreichung": true,
+    "schnelleKreditbetriebsBearbeitung": true,
     "finanzcheckDetails": {
       "ergebnis": {
         "betrag": "0,00",
