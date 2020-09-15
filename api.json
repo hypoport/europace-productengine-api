@@ -664,6 +664,9 @@
         "elektronischeUnterlagenEinreichung": {
           "type": "boolean"
         },
+        "schnelleKreditbetriebsBearbeitung": {
+          "type": "boolean"
+        },
         "finanzcheckDetails": {
           "$ref": "#/definitions/FinanzcheckDetails"
         },
