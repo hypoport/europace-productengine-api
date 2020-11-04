@@ -342,6 +342,12 @@
         ],
         "kreditInstitut": "Testumgebung"
       },
+      "bestehendeKontoverbindungen": {
+        "kontowechselWirdBeabsichtigt": true,
+        "bestehendeKontoverbindungBei": [
+          "SPK_MUSTER"
+        ]
+      },
       "verbindlichkeiten": [],
       "zusaetzlicheKapitalBeschaffung": "0,00",
       "zusatzprodukte": [],

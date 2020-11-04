@@ -1701,6 +1701,9 @@
         "ratenEinzugsKonto": {
           "$ref": "#/definitions/Kontoverbindung"
         },
+        "bestehendeKontoverbindungen": {
+          "$ref": "#/definitions/BestehendeKontoverbindungen"
+        },
         "verbindlichkeiten": {
           "type": "array",
           "items": {
@@ -2709,6 +2712,20 @@
         },
         "kreditInstitut": {
           "type": "string"
+        }
+      }
+    },
+    "BestehendeKontoverbindungen": {
+      "type": "object",
+      "properties": {
+        "kontowechselWirdBeabsichtigt": {
+          "type": "boolean"
+        },
+        "bestehendeKontoverbindungBei": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
