@@ -1166,6 +1166,12 @@
             "$ref": "#/definitions/TilgungsPlanEintrag"
           }
         },
+        "bereitstellungsZinsPlan:": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TilgungsPlanEintrag"
+          }
+        },
         "endeZinsbindung": {
           "type": "string",
           "format": "date"
