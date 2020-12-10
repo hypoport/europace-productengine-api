@@ -1,6 +1,6 @@
 # europace-productengine-api
 
-Diese API ist für Produktanbieter, die Angebote liefern wollen. Das bedeutet, eine Implementierung dieser API muss in der Lage sein, auf diese [beispiel Anfrage](beispiele/anfrage.json) eine [beispiel Antwort](beispiele/antwort.json) zu liefern.
+Über diese API fragt BaufiSmart FINMAS Immobiliendarlehen-Angebote an.
 
 ## Arbeiten an der API
 
@@ -20,6 +20,11 @@ um unnötige Kommentarzeilen-Änderungen in den generierten API-Klassen durch di
 Die API ist im Swagger-Format 2.0 (direkter Vorläufer von [OpenAPI](https://www.openapis.org/)) beschrieben. Über den [Swagger-Code-Generator](https://github.com/swagger-api/swagger-codegen) kann in den unterschiedlichsten Programmiersprachen eine Server-Implementierung direkt aus der API generiert werden.
 
 ### Konzepte
+
+#### Beispiele
+
+* [Anfrage](beispiele/anfrage.json)
+* [Antwort](beispiele/antwort.json)
 
 #### Angebote auch zu minimalem Datenset (Vorbehaltsmeldungen)
 
