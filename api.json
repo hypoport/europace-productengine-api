@@ -1166,7 +1166,7 @@
             "$ref": "#/definitions/TilgungsPlanEintrag"
           }
         },
-        "bereitstellungsZinsPlan:": {
+        "bereitstellungsZinsPlan": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/TilgungsPlanEintrag"
