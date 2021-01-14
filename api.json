@@ -1467,6 +1467,26 @@
         },
         "versicherungsBeitrag": {
           "$ref": "#/definitions/Money"
+        },
+        "zahlweise": {
+          "type": "string",
+          "enum": [
+            "JAEHRLICH",
+            "HALBJAEHRLICH",
+            "VIERTELJAERLICH",
+            "MONATLICH",
+            "EINMALZAHLUNG"
+          ]
+        },
+        "finanzierungsWeise": {
+          "type": "string",
+          "enum": [
+            "DURCH_HAUPTDARLEHEN",
+            "INDIVIDUELL"
+          ]
+        },
+        "zugeordnetesDarlehenId": {
+          "$ref": "#/definitions/Identifier"
         }
       }
     },
