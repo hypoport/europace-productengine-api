@@ -81,7 +81,12 @@
           "produzent": {
             "value": "CREDIT_LIFE"
           },
-          "versicherungsBeitrag": "5.370,00"
+          "versicherungsBeitrag": "5.370,00",
+          "zahlweise": "EINMALZAHLUNG",
+          "finanzierungsWeise": "DURCH_HAUPTDARLEHEN",
+          "zugeordnetesDarlehenId": {
+            "value": "5adaet5a4e6da566431987"
+          }
         }
       ]
     },
