@@ -667,6 +667,9 @@
         "schnelleKreditbetriebsBearbeitung": {
           "type": "boolean"
         },
+        "kreditbetriebsVorgabe": {
+          "$ref": "#/definitions/KreditbetriebsVorgabe"
+        },
         "finanzcheckDetails": {
           "$ref": "#/definitions/FinanzcheckDetails"
         },
@@ -833,6 +836,23 @@
       "properties": {
         "uebersicht": {
           "$ref": "#/definitions/Uebersicht"
+        }
+      }
+    },
+    "KreditbetriebsVorgabe": {
+      "type": "object",
+      "properties": {
+        "kreditEntscheider": {
+          "$ref": "#/definitions/ProduzentenId"
+        },
+        "kreditBetriebe": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kreditBetriebWaehlbar": {
+          "type": "boolean"
         }
       }
     },
