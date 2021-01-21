@@ -4197,6 +4197,13 @@
     ],
     "elektronischeUnterlagenEinreichung": true,
     "schnelleKreditbetriebsBearbeitung": true,
+    "kreditbetriebsVorgabe": {
+      "kreditEntscheider": {
+        "value": "SPK_MUSTERBANK"
+      },
+      "kreditBetriebe": ["k1", "k2"],
+      "kreditBetriebWaehlbar": true
+    },
     "finanzcheckDetails": {
       "ergebnis": {
         "betrag": "0,00",
