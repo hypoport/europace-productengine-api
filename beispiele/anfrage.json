@@ -338,6 +338,7 @@
           "beleihungswertVorgabe": "200.000,00"
         }
       ],
+      "praeferierteAnzahlTilgungsSatzWechsel": 3,
       "ratenEinzugsKonto": {
         "bic": "PBNKDEFFXXX",
         "iban": "DE51370100500007985502",

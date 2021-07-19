@@ -632,6 +632,10 @@
           "type": "integer",
           "format": "int32"
         },
+        "anzahlKostenfreieTilgungssatzWechsel": {
+          "type": "integer",
+          "format": "int32"
+        },
         "beleihungsWertDetails": {
           "type": "array",
           "items": {
@@ -1743,6 +1747,10 @@
           "items": {
             "$ref": "#/definitions/Objekt"
           }
+        },
+        "praeferierteAnzahlTilgungsSatzWechsel": {
+          "type": "integer",
+          "format": "int32"
         },
         "ratenEinzugsKonto": {
           "$ref": "#/definitions/Kontoverbindung"
