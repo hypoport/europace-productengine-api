@@ -2164,6 +2164,12 @@
         "glaeubiger": {
           "type": "string"
         },
+        "grundschuld": {
+          "$ref": "#/definitions/Money"
+        },
+        "restschuld": {
+          "$ref": "#/definitions/Money"
+        },
         "status": {
           "type": "string",
           "enum": [

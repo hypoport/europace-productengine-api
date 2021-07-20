@@ -308,7 +308,15 @@
           "objektArt": "EINFAMILIENHAUS",
           "stellplaetze": {},
           "verwendungsZweck": "KAUF",
-          "vorlasten": [],
+          "vorlasten": [
+            {
+              "abteilung": "ABTEILUNG2",
+              "glaeubiger": "ABC",
+              "grundschuld": "200.000,00",
+              "restschuld": "50.000,00",
+              "status": "BLEIBT_BESTEHEN"
+            }
+          ],
           "wohnlage": "SEHR_GUT",
           "vdpObjektbewertung": {
             "meldungen": [
