@@ -632,7 +632,7 @@
           "type": "integer",
           "format": "int32"
         },
-        "anzahlKostenfreieTilgungssatzWechsel": {
+        "anzahlKostenfreieTilgungsSatzWechsel": {
           "type": "integer",
           "format": "int32"
         },
