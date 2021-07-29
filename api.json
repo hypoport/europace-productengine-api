@@ -2172,6 +2172,12 @@
         "glaeubiger": {
           "type": "string"
         },
+        "grundschuld": {
+          "$ref": "#/definitions/Money"
+        },
+        "restschuld": {
+          "$ref": "#/definitions/Money"
+        },
         "status": {
           "type": "string",
           "enum": [
@@ -2182,7 +2188,9 @@
           ]
         },
         "wert": {
-          "$ref": "#/definitions/Money"
+          "$ref": "#/definitions/Money",
+          "deprecated": true,
+          "description": "Dieses Feld ist mit dem Feld grundschuld abgelöst."
         }
       }
     },
