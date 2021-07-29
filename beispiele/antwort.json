@@ -122,7 +122,6 @@
   "productEngineAngebot": {
     "angebotsDatum": "2018-03-06T23:00:00.000Z",
     "anzahlAuszahlungen": 1,
-    "anzahlKostenfreieTilgungsSatzWechsel": 2,
     "beleihungsWertDetails": [
       {
         "beleihungsWert": "180.000,00",
@@ -406,6 +405,7 @@
     "bindefrist": "2018-03-14T22:59:59.000Z",
     "darlehen": [
       {
+        "anzahlKostenfreieTilgungsSatzWechsel": 2,
         "bindefrist": "2018-03-14T22:59:59.000Z",
         "identifier": {
           "value": "01302587190197313"
