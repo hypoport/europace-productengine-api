@@ -632,10 +632,6 @@
           "type": "integer",
           "format": "int32"
         },
-        "anzahlKostenfreieTilgungsSatzWechsel": {
-          "type": "integer",
-          "format": "int32"
-        },
         "beleihungsWertDetails": {
           "type": "array",
           "items": {
@@ -863,6 +859,10 @@
     "Darlehen": {
       "type": "object",
       "properties": {
+        "anzahlKostenfreieTilgungsSatzWechsel": {
+          "type": "integer",
+          "format": "int32"
+        },
         "bindefrist": {
           "type": "string",
           "format": "date-time"
