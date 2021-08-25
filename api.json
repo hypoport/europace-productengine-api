@@ -2944,6 +2944,9 @@
         "sollProvisionOptimiertWerden": {
           "type": "boolean"
         },
+        "alternative": {
+          "type": "boolean"
+        },
         "vertriebsGruppe": {
           "type": "string"
         }
