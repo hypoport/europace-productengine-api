@@ -846,6 +846,7 @@
         "value": "0123456789"
       },
       "sollProvisionOptimiertWerden": false,
+      "alternative": false,
       "vertriebsGruppe": ""
     }
   }
