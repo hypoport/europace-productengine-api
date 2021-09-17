@@ -1986,7 +1986,8 @@
             "KAUF_NEUBAU_VOM_BAUTRAEGER",
             "KAUF",
             "AN_UMBAU",
-            "ZUR_BESICHERUNG"
+            "ZUR_BESICHERUNG",
+            "KAPITALBESCHAFFUNG"
           ]
         },
         "vorlasten": {
