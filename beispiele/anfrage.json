@@ -364,7 +364,47 @@
       },
       "verbindlichkeiten": [],
       "zusaetzlicheKapitalBeschaffung": "0,00",
-      "zusatzprodukte": [],
+      "zusatzprodukte": [
+        {
+          "abschlussGebuehr": "1.500,00",
+          "abschlussGebuehrenVerrechnung": "SOFORTZAHLUNG",
+          "abtretungsBetrag": "10.000,00",
+          "art": "BAUSPARVERTRAG",
+          "einmalZahlung": "30000,00",
+          "emittent": {
+            "value": "SPK_MUSTERBANK"
+          },
+          "identifier": {
+            "value": "a929b34196759e6e2519c09ed24e1"
+          },
+          "laufzeitEnde": "2018-01-31",
+          "rateMonatlich": "500,00",
+          "tarif": "TARIF_E4",
+          "tilgungsBeitrag": "200,00",
+          "vertragsDatum": "2018-01-31",
+          "vertragsEnde": "2018-01-31",
+          "vertragsNummer": "123ABC",
+          "vertragsSumme": "50.000,00",
+          "verwendung": "TILGUNGSSURROGAT",
+          "zahlungsStrom": [
+            {
+              "betrag": 1000,
+              "datum": "2018-01-31"
+            },
+            {
+              "betrag": 1000,
+              "datum": "2018-02-28"
+            }
+          ],
+          "zusatzkosten": {
+            "einmaligeKosten": "1200,00",
+            "laufendeKosten": {
+              "kosten": "500,00",
+              "zahlungsWeise": "MONATLICH"
+            }
+          }
+        }
+      ],
       "persoenlicheBeratung": true
     }
   },
@@ -767,7 +807,47 @@
         },
         "verbindlichkeiten": [],
         "zusaetzlicheKapitalBeschaffung": "0,00",
-        "zusatzprodukte": [],
+        "zusatzprodukte": [
+          {
+            "abschlussGebuehr": "1.500,00",
+            "abschlussGebuehrenVerrechnung": "SOFORTZAHLUNG",
+            "abtretungsBetrag": "10.000,00",
+            "art": "BAUSPARVERTRAG",
+            "einmalZahlung": "30000,00",
+            "emittent": {
+              "value": "SPK_MUSTERBANK"
+            },
+            "identifier": {
+              "value": "a929b34196759e6e2519c09ed24e1"
+            },
+            "laufzeitEnde": "2018-01-31",
+            "rateMonatlich": "500,00",
+            "tarif": "TARIF_E4",
+            "tilgungsBeitrag": "200,00",
+            "vertragsDatum": "2018-01-31",
+            "vertragsEnde": "2018-01-31",
+            "vertragsNummer": "123ABC",
+            "vertragsSumme": "50.000,00",
+            "verwendung": "TILGUNGSSURROGAT",
+            "zahlungsStrom": [
+              {
+                "betrag": 1000,
+                "datum": "2018-01-31"
+              },
+              {
+                "betrag": 1000,
+                "datum": "2018-02-28"
+              }
+            ],
+            "zusatzkosten": {
+              "einmaligeKosten": "1200,00",
+              "laufendeKosten": {
+                "kosten": "500,00",
+                "zahlungsWeise": "MONATLICH"
+              }
+            }
+          }
+        ],
         "persoenlicheBeratung": true
       }
     },
