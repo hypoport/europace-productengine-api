@@ -2795,6 +2795,16 @@
     "ZusatzProdukt": {
       "type": "object",
       "properties": {
+        "abschlussGebuehr": {
+          "$ref": "#/definitions/Money"
+        },
+        "abschlussGebuehrenVerrechnung": {
+          "type": "string",
+          "enum": [
+            "SOFORTZAHLUNG",
+            "VERRECHNUNG"
+          ]
+        },
         "abtretungsBetrag": {
           "$ref": "#/definitions/Money"
         },
@@ -2821,7 +2831,17 @@
         "identifier": {
           "$ref": "#/definitions/Identifier"
         },
+        "laufzeitEnde": {
+          "type": "string",
+          "format": "date"
+        },
         "rateMonatlich": {
+          "$ref": "#/definitions/Money"
+        },
+        "tarif": {
+          "type": "string"
+        },
+        "tilgungsBeitrag": {
           "$ref": "#/definitions/Money"
         },
         "vertragsDatum": {
@@ -2831,6 +2851,9 @@
         "vertragsEnde": {
           "type": "string",
           "format": "date"
+        },
+        "vertragsNummer": {
+          "type": "string"
         },
         "vertragsSumme": {
           "$ref": "#/definitions/Money"
