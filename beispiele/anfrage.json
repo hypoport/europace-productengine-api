@@ -370,6 +370,7 @@
           "abschlussGebuehrenVerrechnung": "SOFORTZAHLUNG",
           "abtretungsBetrag": "10.000,00",
           "art": "BAUSPARVERTRAG",
+          "bausparVertragArt": "BESTEHENDER_VERTRAG",
           "einmalZahlung": "30000,00",
           "emittent": {
             "value": "SPK_MUSTERBANK"
@@ -813,6 +814,7 @@
             "abschlussGebuehrenVerrechnung": "SOFORTZAHLUNG",
             "abtretungsBetrag": "10.000,00",
             "art": "BAUSPARVERTRAG",
+            "bausparVertragArt": "BESTEHENDER_VERTRAG",
             "einmalZahlung": "30000,00",
             "emittent": {
               "value": "SPK_MUSTERBANK"
