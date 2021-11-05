@@ -1203,6 +1203,9 @@
         "gesamtRateAbAnnuitaetsSprung": {
           "$ref": "#/definitions/Money"
         },
+        "gesamtZahlung": {
+          "$ref": "#/definitions/Money"
+        },
         "gesamtZinsen": {
           "$ref": "#/definitions/Money"
         },
