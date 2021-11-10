@@ -3334,6 +3334,9 @@
             },
             "hoechstSummeDarlehen": {
               "$ref": "#/definitions/Money"
+            },
+            "rundeAufVolleTausender": {
+              "type": "boolean"
             }
           }
         }
