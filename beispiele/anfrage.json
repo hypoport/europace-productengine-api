@@ -4,7 +4,33 @@
   "nachrangDarlehenIgnorieren": false,
   "offerworkflowInput": {
     "fremdProduktInformationen": {
-      "fremdBausparInformationen": [],
+      "fremdBausparInformationen": [
+        {
+          "abschlussGebuehr": "500,00",
+          "auszahlungsBetragBeiZuteilung": "60.000,00",
+          "bausparSumme": "100.000,00",
+          "einmalZahlung": "10.000,00",
+          "identifier": "abc123",
+          "produzent": "LBS_WEST",
+          "produzentLangname": "LBS West",
+          "tarif": "tarif_xyz",
+          "sparBeitragMonatlich": "123,45",
+          "vertragsBeginn": "2022-08-01",
+          "verwaltungsGebuehrJaehrlich": "10,00",
+          "verwendung": "TILGUNGSERSATZ",
+          "zahlungsStrom": [
+            {
+              "betrag": "543.21",
+              "datum": "2022-08-31"
+            },
+            {
+              "betrag": "543.21",
+              "datum": "2022-09-30"
+            }
+          ],
+          "zuteilungsDatum": "2035-01-01"
+        }
+      ],
       "fremdDarlehenInformationen": [
         {
           "anfaenglicherTilgungssatz": "3,508",
