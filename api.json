@@ -1541,6 +1541,9 @@
         "produzentLangname": {
           "type": "string"
         },
+        "tarif": {
+          "type": "string"
+        },
         "sparBeitragMonatlich": {
           "$ref": "#/definitions/Money"
         },
