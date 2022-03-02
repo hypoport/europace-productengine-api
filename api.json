@@ -541,6 +541,7 @@
           "type": "string",
           "enum": [
             "ANNUITAETENDARLEHEN",
+            "BAUSPARDARLEHEN",
             "BAUSPARSOFORTDARLEHEN",
             "CAPDARLEHEN",
             "FORWARDDARLEHEN",
