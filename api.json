@@ -133,7 +133,8 @@
             "SINGULAERES_FOERDER",
             "SINGULAERES_KFW",
             "VARIABLES_DARLEHEN",
-            "ZWIFI"
+            "ZWIFI",
+            "SINGULAERES_DARLEHEN_MIT_ANDEREM_KREDITENTSCHEIDER"
           ]
         },
         "identifier": {
@@ -150,6 +151,9 @@
         },
         "produktEigenschaften": {
           "$ref": "#/definitions/ProduktEigenschaften"
+        },
+        "singulaer": {
+          "type": "boolean"
         }
       }
     },
@@ -368,6 +372,20 @@
           "properties": {
             "bezugsOption": {
               "$ref": "#/definitions/KfwOption"
+            }
+          }
+        }
+      ]
+    },
+    "SingulaereDarlehensOptionMitAnderemKreditentscheider": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DarlehensOption"
+        },
+        {
+          "properties": {
+            "bezugsOption": {
+              "$ref": "#/definitions/DarlehensOption"
             }
           }
         }
