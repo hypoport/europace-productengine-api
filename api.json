@@ -2714,6 +2714,9 @@
         "darlehenEinerFinanzierungsImmobilie": {
           "type": "boolean"
         },
+        "darlehensbetrag": {
+          "$ref": "#/definitions/Money"
+        },
         "darlehensGeber": {
           "type": "array",
           "items": {

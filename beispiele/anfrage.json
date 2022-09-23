@@ -633,7 +633,29 @@
         "value": "SPK_MUSTER"
       },
       "produzentenAnfrage": {
-        "abzuloesendeDarlehen": [],
+        "abzuloesendeDarlehen": [
+          {
+            "abzuloesendeRestschuld": "120.000,00",
+            "aktuelleRestschuld": "150.000,00",
+            "darlehenEinerFinanzierungsImmobilie": true,
+            "darlehensbetrag": "200.000,00",
+            "darlehensGeber": {
+              "value": "SPK_MUSTER"
+            },
+            "darlehensGeberBezeichnung": "Muster Sparkasse",
+            "darlehensKontonummer": "4122000535",
+            "darlehensTyp": "IMMOBILIENDARLEHEN",
+            "endeLaufzeit": "2040-01-10",
+            "grundschuld": "200.000,00",
+            "identifier": {
+              "value": "763503285908"
+            },
+            "monatlicheRate": "300,00",
+            "sollZins": "2,3",
+            "sondertilgungZumZinsbindungsende": "0,00",
+            "zinsbindungsEnde": "2025-06-01"
+          }
+        ],
         "anzahlAuszahlungen": 1,
         "auszahlungsKonto": {
           "bic": "PBNKDEFFXXX",
