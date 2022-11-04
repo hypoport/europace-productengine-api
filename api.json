@@ -668,6 +668,9 @@
         "schnelleKreditbetriebsBearbeitung": {
           "type": "boolean"
         },
+        "oneClick": {
+          "type": "boolean"
+        },
         "kreditbetriebsVorgabe": {
           "$ref": "#/definitions/KreditbetriebsVorgabe"
         },
