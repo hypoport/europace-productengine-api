@@ -699,6 +699,7 @@
                 "sonstigesEinkommenMonatlich": "120,00"
               }
             },
+            "email": "test@europace.de",
             "familienStand": "LEDIG",
             "geburtsDatum": "1970-01-01",
             "geburtsOrt": "Irgendwo",
@@ -719,6 +720,7 @@
             "weiteresImmobilienVermoegen": [],
             "arbeitgeberName": "Firma Arbeitgeber",
             "branche": "SONSTIGES",
+            "telefonnummer": "123000999",
             "telefonnummerVorhanden": true,
             "ausweis": {
               "nummer": "123456879-0",

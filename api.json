@@ -2268,6 +2268,9 @@
         "einkommen": {
           "$ref": "#/definitions/EinkommenMonatlich"
         },
+        "email": {
+          "type": "string"
+        },
         "familienStand": {
           "type": "string",
           "enum": [
@@ -2355,6 +2358,9 @@
           "type": "string"
         },
         "branche": {
+          "type": "string"
+        },
+        "telefonnummer": {
           "type": "string"
         },
         "telefonnummerVorhanden": {
