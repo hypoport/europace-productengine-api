@@ -861,6 +861,7 @@
           "max": "2,5"
         },
         "reservierbarerZins": "2,23",
+        "restschuldNachZinsbindungFuerKalkulatorischeRateBerechnung": "70.000,00",
         "rueckdatierungsfrist": "2018-03-06T23:00:00.000Z",
         "spezifikation": {
           "abzuloesendeDarlehenIds": [],
