@@ -601,6 +601,9 @@
         "restschuldNachZinsbindung": {
           "$ref": "#/definitions/Money"
         },
+        "restschuldNachZinsbindungFuerKalkulatorischeRateBerechnung": {
+          "$ref": "#/definitions/Money"
+        },
         "sollzins": {
           "$ref": "#/definitions/Percent"
         },
@@ -903,6 +906,9 @@
         },
         "reservierbarerZins": {
           "$ref": "#/definitions/Percent"
+        },
+        "restschuldNachZinsbindungFuerKalkulatorischeRateBerechnung": {
+          "$ref": "#/definitions/Money"
         },
         "rueckdatierungsfrist": {
           "type": "string",
