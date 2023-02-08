@@ -1794,6 +1794,9 @@
         },
         "persoenlicheBeratung": {
           "type": "boolean"
+        },
+        "oneClickSpezifischeDaten": {
+          "$ref": "#/definitions/OneClickSpezifischeDaten"
         }
       }
     },
@@ -3556,6 +3559,31 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "OneClickSpezifischeDaten": {
+      "type": "object",
+      "properties": {
+        "kontoChecks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OneClickKontoCheck"
+          }
+        }
+      }
+    },
+    "OneClickKontoCheck": {
+      "type": "object",
+      "properties": {
+        "antragstellerId": {
+          "type": "string"
+        },
+        "kontoCheckAusgefuehrt": {
+          "type": "boolean"
+        },
+        "kontoCheckGueltig": {
+          "type": "boolean"
         }
       }
     }
