@@ -929,7 +929,21 @@
             }
           }
         ],
-        "persoenlicheBeratung": true
+        "persoenlicheBeratung": true,
+        "oneClickSpezifischeDaten": {
+          "kontoChecks": [
+            {
+              "antragstellerId": "12345",
+              "kontoCheckAusgefuehrt": true,
+              "kontoCheckGueltig": false
+            },
+            {
+              "antragstellerId": "67891",
+              "kontoCheckAusgefuehrt": false,
+              "kontoCheckGueltig": true
+            }
+          ]
+        }
       }
     },
     "produzent": {
