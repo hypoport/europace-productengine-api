@@ -2031,6 +2031,49 @@
         },
         "beleihungswertVorgabe": {
           "$ref": "#/definitions/Money"
+        },
+        "energieEffizienzAusweis": {
+          "$ref": "#/definitions/EnergieEffizienzAusweis"
+        },
+        "endEnergieGeplantBeiModernisierung": {
+          "$ref": "#/definitions/EnergieKennwert"
+        }
+      }
+    },
+    "EnergieEffizienzAusweis": {
+      "type": "object",
+      "properties": {
+        "energieEffizienzAusweisTyp": {
+          "type": "string",
+          "enum": [
+            "ENDENERGIEBEDARF",
+            "ENDENERGIEVERBRAUCH"
+          ]
+        },
+        "endEnergieAktuell": {
+          "$ref": "#/definitions/EnergieKennwert"
+        },
+        "energieEffizienzKlasse": {
+          "type": "string",
+          "enum": [
+            "A_PLUS",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ]
+        }
+      }
+    },
+    "EnergieKennwert": {
+      "type": "object",
+      "properties": {
+        "kilowattstundenProJahrUndQuadratmeter": {
+          "type": "number"
         }
       }
     },
