@@ -952,6 +952,10 @@
               "kontoCheckAusgefuehrt": false,
               "kontoCheckGueltig": true
             }
+          ],
+          "dokumentenKategorien": [
+            "Expose",
+            "Kontoauszug"
           ]
         }
       }
