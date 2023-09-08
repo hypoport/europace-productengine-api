@@ -233,6 +233,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/TilgungsDarlehensOption"
+        },
+        {
+          "type": "object"
         }
       ]
     },
@@ -314,6 +317,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/GemeinsameAttributeDarlehensOption"
+        },
+        {
+          "type": "object"
         }
       ]
     },
@@ -505,10 +511,10 @@
       }
     },
     "Money": {
-      "type": "number"
+      "type": "object"
     },
     "Identifier": {
-      "type": "string"
+      "type": "object"
     },
     "FremdDarlehenInformation": {
       "type": "object",
@@ -1618,7 +1624,7 @@
       }
     },
     "Percent": {
-      "type": "number"
+      "type": "object"
     },
     "PercentRange": {
       "type": "object",
@@ -3342,6 +3348,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/DarlehensBetragsVorgabe"
+        },
+        {
+          "type": "object"
         }
       ]
     },
@@ -3479,6 +3488,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/TilgungsOption"
+        },
+        {
+          "type": "object"
         }
       ]
     },
@@ -3514,6 +3526,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/TilgungsOption"
+        },
+        {
+          "type": "object"
         }
       ]
     },
@@ -3548,6 +3563,9 @@
       "allOf": [
         {
           "$ref": "#/definitions/SondertilgungsOption"
+        },
+        {
+          "type": "object"
         }
       ]
     },
