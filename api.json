@@ -2426,9 +2426,6 @@
         },
         "ausweis": {
           "$ref": "#/definitions/Ausweis"
-        },
-        "produzentEigeneBestehendeImmobilienKredite": {
-          "$ref": "#/definitions/Money"
         }
       }
     },
