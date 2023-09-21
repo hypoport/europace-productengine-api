@@ -1511,6 +1511,14 @@
         "versicherungsBeitrag": {
           "$ref": "#/definitions/Money"
         },
+        "versicherungsBeginn": {
+          "type": "string",
+          "format": "date"
+        },
+        "versicherungsEnde": {
+          "type": "string",
+          "format": "date"
+        },
         "zahlweise": {
           "type": "string",
           "enum": [
@@ -1529,6 +1537,9 @@
           ]
         },
         "zugeordnetesDarlehenId": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "vertragsPartnerId": {
           "$ref": "#/definitions/Identifier"
         }
       }
