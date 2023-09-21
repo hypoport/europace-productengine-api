@@ -137,10 +137,15 @@
             "value": "CREDIT_LIFE"
           },
           "versicherungsBeitrag": "5.370,00",
+          "versicherungsBeginn": "2018-01-31",
+          "versicherungsEnde": "2028-01-31",
           "zahlweise": "EINMALZAHLUNG",
           "finanzierungsWeise": "DURCH_HAUPTDARLEHEN",
           "zugeordnetesDarlehenId": {
             "value": "5adaet5a4e6da566431987"
+          },
+          "vertragsPartnerId": {
+            "value": "5adaet5a4e6da566431998"
           }
         }
       ]
