@@ -750,7 +750,7 @@
           "type": "integer",
           "format": "int32"
         },
-        "anmerkung":{
+        "anmerkung": {
           "type": "string"
         },
         "bearbeitungszeitVom": {
