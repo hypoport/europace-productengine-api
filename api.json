@@ -722,6 +722,9 @@
         },
         "zusatzkostenVerteilerOutput": {
           "$ref": "#/definitions/ZusatzkostenVerteilerOutput"
+        },
+        "bearbeitungszeit": {
+          "$ref": "#/definitions/Bearbeitungszeit"
         }
       }
     },
@@ -733,6 +736,26 @@
           "items": {
             "$ref": "#/definitions/DarlehenMitEffektivZinsatzRelevanteZusaetzlicheKosten"
           }
+        }
+      }
+    },
+    "Bearbeitungszeit": {
+      "type": "object",
+      "properties": {
+        "minimalInTagen": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "maximalInTagen": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "anmerkung": {
+          "type": "string"
+        },
+        "letzteAnpassungAm": {
+          "type": "string",
+          "format": "date"
         }
       }
     },

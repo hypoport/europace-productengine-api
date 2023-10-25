@@ -4471,6 +4471,12 @@
           }
         }
       ]
+    },
+    "bearbeitungszeit": {
+      "minimalInTagen": 1,
+      "maximalInTagen": 7,
+      "anmerkung": "hier eine Anmerkung zur Bearbeitungszeit",
+      "letzteAnpassungAm": "2023-10-24"
     }
   }
 }
