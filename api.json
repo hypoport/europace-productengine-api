@@ -722,9 +722,6 @@
         },
         "zusatzkostenVerteilerOutput": {
           "$ref": "#/definitions/ZusatzkostenVerteilerOutput"
-        },
-        "bearbeitungszeit": {
-          "$ref": "#/definitions/Bearbeitungszeit"
         }
       }
     },
@@ -948,6 +945,9 @@
         },
         "tilgungsPlan": {
           "$ref": "#/definitions/KundenTilgungsPlan"
+        },
+        "bearbeitungszeit": {
+          "$ref": "#/definitions/Bearbeitungszeit"
         }
       }
     },
