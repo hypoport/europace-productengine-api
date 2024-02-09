@@ -2662,6 +2662,9 @@
         },
         "vermoegen": {
           "$ref": "#/definitions/Money"
+        },
+        "energieEffizienzAusweis": {
+          "$ref": "#/definitions/EnergieEffizienzAusweis"
         }
       }
     },
