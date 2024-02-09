@@ -4195,6 +4195,12 @@
           "rateInDerTilgungsfreienZeit": "236,00",
           "restschuldNachZinsbindung": "28.100,27",
           "tilgungsPlanAusbuchen": false
+        },
+        "bearbeitungszeit": {
+          "minimalInTagen": 1,
+          "maximalInTagen": 7,
+          "anmerkung": "hier eine Anmerkung zur Bearbeitungszeit",
+          "letzteAnpassungAm": "2023-10-24"
         }
       }
     ],

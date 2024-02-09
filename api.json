@@ -736,6 +736,26 @@
         }
       }
     },
+    "Bearbeitungszeit": {
+      "type": "object",
+      "properties": {
+        "minimalInTagen": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "maximalInTagen": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "anmerkung": {
+          "type": "string"
+        },
+        "letzteAnpassungAm": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
     "DarlehenMitEffektivZinsatzRelevanteZusaetzlicheKosten": {
       "type": "object",
       "properties": {
@@ -925,6 +945,9 @@
         },
         "tilgungsPlan": {
           "$ref": "#/definitions/KundenTilgungsPlan"
+        },
+        "bearbeitungszeit": {
+          "$ref": "#/definitions/Bearbeitungszeit"
         }
       }
     },
@@ -1511,6 +1534,14 @@
         "versicherungsBeitrag": {
           "$ref": "#/definitions/Money"
         },
+        "versicherungsBeginn": {
+          "type": "string",
+          "format": "date"
+        },
+        "versicherungsEnde": {
+          "type": "string",
+          "format": "date"
+        },
         "zahlweise": {
           "type": "string",
           "enum": [
@@ -1529,6 +1560,9 @@
           ]
         },
         "zugeordnetesDarlehenId": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "vertragsPartnerId": {
           "$ref": "#/definitions/Identifier"
         }
       }
