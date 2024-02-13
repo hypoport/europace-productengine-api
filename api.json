@@ -2733,6 +2733,9 @@
         "grundbuchEintragungsKostenEinmalig": {
           "$ref": "#/definitions/Money"
         },
+        "ratenschutzVersicherungsPraemieEinmalig": {
+          "$ref": "#/definitions/Money"
+        },
         "sonstigeKostenEinmalig": {
           "$ref": "#/definitions/Money"
         },
