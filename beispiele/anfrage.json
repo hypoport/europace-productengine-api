@@ -237,7 +237,13 @@
           }
         }
       ],
-      "effektivZinsKosten": {},
+      "effektivZinsKosten": {
+        "beratungsHonorar": "1.000,00",
+        "grundbuchEintragungsKostenEinmalig": "2.000,00",
+        "ratenschutzVersicherungsPraemieEinmalig": "3.000,00",
+        "sonstigeKostenEinmalig": "4.000,00",
+        "wohnGebaeudeVersicherungsKostenJaehrlich": "5.000,00"
+      },
       "externeDrittDarlehen": [
         {
           "darlehenTyp": "ARBEITGEBERDARLEHEN",
