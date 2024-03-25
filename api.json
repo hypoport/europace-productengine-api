@@ -680,6 +680,9 @@
         "oneClick": {
           "type": "boolean"
         },
+        "kontoCheck": {
+          "type": "boolean"
+        },
         "kreditbetriebsVorgabe": {
           "$ref": "#/definitions/KreditbetriebsVorgabe"
         },

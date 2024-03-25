@@ -4207,6 +4207,7 @@
     "elektronischeUnterlagenEinreichung": true,
     "schnelleKreditbetriebsBearbeitung": true,
     "oneClick": true,
+    "kontoCheck": true,
     "kreditbetriebsVorgabe": {
       "kreditEntscheider": {
         "value": "SPK_MUSTERBANK"
